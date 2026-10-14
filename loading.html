@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="sr" style="background:#EAE3D6">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Ekran učitavanja sajta Vila Katarina.">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<title>Vila Katarina — loading screen</title>
+<!--VK-HEAD-->
+<style id="vk-loader-css">
+html,body{background:#EAE3D6;margin:0}
+#vk-loader{display:none}
+html.vk-l #vk-loader{display:flex;position:fixed;inset:0;z-index:2147483000;align-items:center;justify-content:center;background:#EAE3D6;transform:translateY(0);will-change:transform}
+html.vk-lock,html.vk-lock body{overflow:hidden!important}
+#vk-loader::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.32;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .43 0 0 0 0 .4 0 0 0 0 .35 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+#vk-loader::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 70% 60% at 50% 45%,rgba(249,246,241,.55),rgba(249,246,241,0) 70%)}
+.vk-l-in{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;text-align:center;font-family:'Sora',system-ui,sans-serif;-webkit-font-smoothing:antialiased;transition:opacity .3s ease-out,transform .4s ease-out}
+.vk-l-art{display:block;width:240px;height:120px;overflow:visible}
+.vk-l-d{fill:none;stroke:#2F4A3A;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:vk-l-draw var(--t,.5s) cubic-bezier(.65,0,.35,1) var(--d,0s) forwards}
+@keyframes vk-l-draw{to{stroke-dashoffset:0}}
+.vk-l-sun{fill:#C9A24B;transform:translateY(34px);animation:vk-l-rise 1.7s cubic-bezier(.22,1,.36,1) .25s forwards}
+@keyframes vk-l-rise{to{transform:none}}
+.vk-l-logo{margin-top:22px;display:flex;flex-direction:column;align-items:center;line-height:1;opacity:0;animation:vk-l-fade .6s ease-out .75s forwards}
+.vk-l-name{font-size:26px;font-weight:600;letter-spacing:-.01em;color:#1E2E25}
+.vk-l-sub{font-size:11px;font-weight:500;letter-spacing:.32em;padding-left:.32em;color:#6E675B;margin-top:8px}
+.vk-l-bar{margin-top:30px;width:160px;height:2px;border-radius:2px;background:rgba(201,162,75,.22);overflow:hidden;opacity:0;animation:vk-l-fade .5s ease-out .2s forwards}
+.vk-l-bar i{display:block;height:100%;background:#C9A24B;transform-origin:0 50%;transform:scaleX(0)}
+.vk-l-txt{margin:14px 0 0;font-size:12px;letter-spacing:.02em;color:#6E675B;opacity:0;animation:vk-l-fade .5s ease-out .3s forwards}
+@keyframes vk-l-fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+#vk-loader.vk-l-out .vk-l-in{opacity:0;transform:translateY(-10px)}
+#vk-loader.vk-l-up{transform:translateY(-100%);transition:transform .8s cubic-bezier(.7,0,.2,1);box-shadow:0 18px 50px -10px rgba(30,46,37,.22)}
+#vk-loader.vk-l-fade{opacity:0;transition:opacity .3s ease-out}
+@media (max-width:600px){.vk-l-art{width:180px;height:90px}.vk-l-name{font-size:22px}.vk-l-logo{margin-top:18px}}
+@media (prefers-reduced-motion:reduce){.vk-l-art{display:none}.vk-l-logo,.vk-l-bar,.vk-l-txt{animation:none;opacity:1}.vk-l-in{transition:none}}
+</style>
+<script>
+(function(){var d=document.documentElement,show=true;
+try{var n=performance.getEntriesByType&&performance.getEntriesByType('navigation')[0];
+var type=n?n.type:(performance.navigation&&performance.navigation.type===1?'reload':'navigate');
+var same=false;try{same=!!document.referrer&&new URL(document.referrer).origin===location.origin}catch(e){}
+var seen=sessionStorage.getItem('vk-visited')==='1';
+var nav=sessionStorage.getItem('vk-nav')==='1';sessionStorage.removeItem('vk-nav');if(type!=='reload'&&(same||nav)&&seen)show=false;
+sessionStorage.setItem('vk-visited','1');}catch(e){}
+if(show){d.classList.add('vk-l');d.classList.add('vk-lock');}})();
+</script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<!--/VK-HEAD-->
+</head>
+<body>
+<!--VK-BODY-->
+<div id="vk-loader" role="status" aria-live="polite" aria-label="Učitavanje">
+<div class="vk-l-in">
+<svg class="vk-l-art" viewBox="0 0 240 120" aria-hidden="true">
+<defs><clipPath id="vk-l-sky"><path d="M0 0H240V74H224C200 66 170 80 140 70C100 56 60 60 20 92H0Z"/></clipPath></defs>
+<g clip-path="url(#vk-l-sky)"><circle class="vk-l-sun" cx="150" cy="50" r="10"/></g>
+<path class="vk-l-d" pathLength="1" style="--d:0s;--t:.9s" d="M20 92C60 60 100 56 140 70C170 80 200 66 224 74"/>
+<path class="vk-l-d" pathLength="1" style="--d:.12s;--t:1s" d="M4 104C40 84 76 82 108 94C140 106 176 86 236 98"/>
+<path class="vk-l-d" pathLength="1" style="--d:.62s;--t:.35s" d="M168 97V71"/>
+<path class="vk-l-d" pathLength="1" style="--d:.66s;--t:.4s" d="M161 81L168 71L175 81M159 89L168 78L177 89M157 97L168 85L179 97"/>
+<path class="vk-l-d" pathLength="1" style="--d:.74s;--t:.35s" d="M186 95V60"/>
+<path class="vk-l-d" pathLength="1" style="--d:.78s;--t:.4s" d="M178 72L186 60L194 72M175 82L186 69L197 82M172 92L186 78L200 92"/>
+<path class="vk-l-d" pathLength="1" style="--d:.86s;--t:.3s" d="M204 99V72"/>
+<path class="vk-l-d" pathLength="1" style="--d:.88s;--t:.32s" d="M198 81L204 72L210 81M196 89L204 79L212 89M194 97L204 86L214 97"/>
+</svg>
+<div class="vk-l-logo"><span class="vk-l-name">Vila Katarina</span><span class="vk-l-sub">ZLATIBOR</span></div>
+<div class="vk-l-bar"><i></i></div>
+<p class="vk-l-txt">Pripremamo vaš boravak…</p>
+</div>
+</div>
+<script>
+(function(){var d=document.documentElement,L=document.getElementById('vk-loader');if(!L)return;
+if(!d.classList.contains('vk-l')){L.style.display='none';return;}
+var RM=matchMedia('(prefers-reduced-motion: reduce)').matches,bar=L.querySelector('.vk-l-bar i'),t0=performance.now(),MIN=1200,MAX=6000;
+var loaded=document.readyState==='complete',p=0,target=0,done=false;
+addEventListener('load',function(){loaded=true});
+function hero(){var m=document.querySelector('main');if(!m)return null;var s=m.querySelector('section')||m;return [].slice.call(s.querySelectorAll('img'))}
+function tick(now){var el=now-t0,im=[].filter.call(document.images,function(i){return !L.contains(i)}),c=0;
+im.forEach(function(i){if(i.complete)c++});
+var f=!document.fonts||document.fonts.status==='loaded'?1:0;
+var V=window.__vkImgs||[],P=window.__vkImgP||{},nd=0;V.forEach(function(u){var q=P[u];if(!q||q.done)nd++});
+var real=(c+nd+f+(loaded?1:0))/(im.length+V.length+2),creep=.8*(1-Math.exp(-el/1800));
+target=Math.max(target,Math.min(.96,Math.max(real*.96,creep)));
+p+=(target-p)*.1;bar.style.transform='scaleX('+p.toFixed(4)+')';
+var h=hero(),domOk=h?true:(loaded&&(!document.querySelector('x-dc')||el>2500)),imgOk=nd===V.length&&c===im.length;
+if((loaded&&f&&domOk&&imgOk&&el>=MIN)||el>=MAX)finish();else requestAnimationFrame(tick);}
+function reveal(){window.__vkGo=1;dispatchEvent(new Event('vk:reveal'))}
+function end(){L.style.display='none';d.classList.remove('vk-l','vk-lock')}
+function finish(){if(done)return;done=true;
+bar.style.transition='transform .35s cubic-bezier(.22,1,.36,1)';bar.style.transform='scaleX(1)';
+if(RM){setTimeout(function(){reveal();L.classList.add('vk-l-fade');setTimeout(end,320)},250);return;}
+setTimeout(function(){L.classList.add('vk-l-out')},380);
+setTimeout(function(){reveal();L.classList.add('vk-l-up');setTimeout(end,820)},680);}
+requestAnimationFrame(tick);})();
+</script>
+<!--/VK-BODY-->
+<main style="font-family:'Sora',sans-serif;color:#3D3A35;padding:80px 24px;text-align:center">
+<p>Pregled loading screena. Osvežite stranicu da ga vidite ponovo.</p>
+</main>
+</body>
+</html>

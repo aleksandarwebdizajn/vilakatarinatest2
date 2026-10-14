@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="sr" style="background:#EAE3D6">
+<head>
+<!--VK-HEAD-->
+<style id="vk-loader-css">
+html,body{background:#EAE3D6;margin:0}
+#vk-loader{display:none}
+html.vk-l #vk-loader{display:flex;position:fixed;inset:0;z-index:2147483000;align-items:center;justify-content:center;background:#EAE3D6;transform:translateY(0);will-change:transform}
+html.vk-lock,html.vk-lock body{overflow:hidden!important}
+#vk-loader::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.32;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .43 0 0 0 0 .4 0 0 0 0 .35 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+#vk-loader::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 70% 60% at 50% 45%,rgba(249,246,241,.55),rgba(249,246,241,0) 70%)}
+.vk-l-in{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;text-align:center;font-family:'Sora',system-ui,sans-serif;-webkit-font-smoothing:antialiased;transition:opacity .3s ease-out,transform .4s ease-out}
+.vk-l-art{display:block;width:240px;height:120px;overflow:visible}
+.vk-l-d{fill:none;stroke:#2F4A3A;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:vk-l-draw var(--t,.5s) cubic-bezier(.65,0,.35,1) var(--d,0s) forwards}
+@keyframes vk-l-draw{to{stroke-dashoffset:0}}
+.vk-l-sun{fill:#C9A24B;transform:translateY(34px);animation:vk-l-rise 1.7s cubic-bezier(.22,1,.36,1) .25s forwards}
+@keyframes vk-l-rise{to{transform:none}}
+.vk-l-logo{margin-top:22px;display:flex;flex-direction:column;align-items:center;line-height:1;opacity:0;animation:vk-l-fade .6s ease-out .75s forwards}
+.vk-l-name{font-size:26px;font-weight:600;letter-spacing:-.01em;color:#1E2E25}
+.vk-l-sub{font-size:11px;font-weight:500;letter-spacing:.32em;padding-left:.32em;color:#6E675B;margin-top:8px}
+.vk-l-bar{margin-top:30px;width:160px;height:2px;border-radius:2px;background:rgba(201,162,75,.22);overflow:hidden;opacity:0;animation:vk-l-fade .5s ease-out .2s forwards}
+.vk-l-bar i{display:block;height:100%;background:#C9A24B;transform-origin:0 50%;transform:scaleX(0)}
+.vk-l-txt{margin:14px 0 0;font-size:12px;letter-spacing:.02em;color:#6E675B;opacity:0;animation:vk-l-fade .5s ease-out .3s forwards}
+@keyframes vk-l-fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+#vk-loader.vk-l-out .vk-l-in{opacity:0;transform:translateY(-10px)}
+#vk-loader.vk-l-up{transform:translateY(-100%);transition:transform .8s cubic-bezier(.7,0,.2,1);box-shadow:0 18px 50px -10px rgba(30,46,37,.22)}
+#vk-loader.vk-l-fade{opacity:0;transition:opacity .3s ease-out}
+@media (max-width:600px){.vk-l-art{width:180px;height:90px}.vk-l-name{font-size:22px}.vk-l-logo{margin-top:18px}}
+@media (prefers-reduced-motion:reduce){.vk-l-art{display:none}.vk-l-logo,.vk-l-bar,.vk-l-txt{animation:none;opacity:1}.vk-l-in{transition:none}}
+</style>
+<script>
+(function(){var d=document.documentElement,show=true;
+try{var n=performance.getEntriesByType&&performance.getEntriesByType('navigation')[0];
+var type=n?n.type:(performance.navigation&&performance.navigation.type===1?'reload':'navigate');
+var same=false;try{same=!!document.referrer&&new URL(document.referrer).origin===location.origin}catch(e){}
+var seen=sessionStorage.getItem('vk-visited')==='1';
+var nav=sessionStorage.getItem('vk-nav')==='1';sessionStorage.removeItem('vk-nav');if(type!=='reload'&&(same||nav)&&seen)show=false;
+sessionStorage.setItem('vk-visited','1');}catch(e){}
+if(show){d.classList.add('vk-l');d.classList.add('vk-lock');}})();
+</script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<!--/VK-HEAD-->
+<!--VK-IMGS-->
+<link rel="preload" as="image" href="images/katarina-i-milan.webp" fetchpriority="high">
+<script>
+(function(){var S=window.__vkS='',M=["karta-zlatibora","karta-zlatibora-siroka","mini-mapa-v2"],A=function(u){try{return new URL(u,location.href).href}catch(e){return u}},P=window.__vkImgP=window.__vkImgP||{},K=window.__vkImgK=[];
+function go(u,hi){u=A(u);if(P[u])return P[u];var i=new Image(),p;i.decoding='async';if(hi&&'fetchPriority' in i)i.fetchPriority='high';
+p=P[u]=new Promise(function(r){function fin(){p.done=1;r()}function ok(){(i.decode?i.decode():Promise.resolve()).then(fin,fin)}i.onload=ok;i.onerror=fin;i.src=u});K.push(i);return p}
+window.__vkImg=go;var U=function(n){return 'images/'+n+(M.indexOf(n)>=0?'.png':'.webp')},H=[].map(U),L=[].map(U).concat([]);
+window.__vkImgs=L.map(A);H.forEach(function(u){go(u,1)});L.forEach(function(u){go(u)});})();
+</script>
+<!--/VK-IMGS-->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/kontakt.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kontakt — Vila Katarina, Zlatibor</title>
+<meta name="description" content="Telefon, Viber, WhatsApp i forma za upit. Domaćini Katarina i Milan odgovaraju na svaki upit.">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<script src="js/components.js"></script>
+<script src="js/runtime.js"></script>
+</head>
+<body style="background:#EAE3D6">
+<!--VK-BODY-->
+<div id="vk-loader" role="status" aria-live="polite" aria-label="Učitavanje">
+<div class="vk-l-in">
+<svg class="vk-l-art" viewBox="0 0 240 120" aria-hidden="true">
+<defs><clipPath id="vk-l-sky"><path d="M0 0H240V74H224C200 66 170 80 140 70C100 56 60 60 20 92H0Z"/></clipPath></defs>
+<g clip-path="url(#vk-l-sky)"><circle class="vk-l-sun" cx="150" cy="50" r="10"/></g>
+<path class="vk-l-d" pathLength="1" style="--d:0s;--t:.9s" d="M20 92C60 60 100 56 140 70C170 80 200 66 224 74"/>
+<path class="vk-l-d" pathLength="1" style="--d:.12s;--t:1s" d="M4 104C40 84 76 82 108 94C140 106 176 86 236 98"/>
+<path class="vk-l-d" pathLength="1" style="--d:.62s;--t:.35s" d="M168 97V71"/>
+<path class="vk-l-d" pathLength="1" style="--d:.66s;--t:.4s" d="M161 81L168 71L175 81M159 89L168 78L177 89M157 97L168 85L179 97"/>
+<path class="vk-l-d" pathLength="1" style="--d:.74s;--t:.35s" d="M186 95V60"/>
+<path class="vk-l-d" pathLength="1" style="--d:.78s;--t:.4s" d="M178 72L186 60L194 72M175 82L186 69L197 82M172 92L186 78L200 92"/>
+<path class="vk-l-d" pathLength="1" style="--d:.86s;--t:.3s" d="M204 99V72"/>
+<path class="vk-l-d" pathLength="1" style="--d:.88s;--t:.32s" d="M198 81L204 72L210 81M196 89L204 79L212 89M194 97L204 86L214 97"/>
+</svg>
+<div class="vk-l-logo"><span class="vk-l-name">Vila Katarina</span><span class="vk-l-sub">ZLATIBOR</span></div>
+<div class="vk-l-bar"><i></i></div>
+<p class="vk-l-txt">Pripremamo vaš boravak…</p>
+</div>
+</div>
+<script>
+(function(){var d=document.documentElement,L=document.getElementById('vk-loader');if(!L)return;
+if(!d.classList.contains('vk-l')){L.style.display='none';return;}
+var RM=matchMedia('(prefers-reduced-motion: reduce)').matches,bar=L.querySelector('.vk-l-bar i'),t0=performance.now(),MIN=1200,MAX=6000;
+var loaded=document.readyState==='complete',p=0,target=0,done=false;
+addEventListener('load',function(){loaded=true});
+function hero(){var m=document.querySelector('main');if(!m)return null;var s=m.querySelector('section')||m;return [].slice.call(s.querySelectorAll('img'))}
+function tick(now){var el=now-t0,im=[].filter.call(document.images,function(i){return !L.contains(i)}),c=0;
+im.forEach(function(i){if(i.complete)c++});
+var f=!document.fonts||document.fonts.status==='loaded'?1:0;
+var V=window.__vkImgs||[],P=window.__vkImgP||{},nd=0;V.forEach(function(u){var q=P[u];if(!q||q.done)nd++});
+var real=(c+nd+f+(loaded?1:0))/(im.length+V.length+2),creep=.8*(1-Math.exp(-el/1800));
+target=Math.max(target,Math.min(.96,Math.max(real*.96,creep)));
+p+=(target-p)*.1;bar.style.transform='scaleX('+p.toFixed(4)+')';
+var h=hero(),domOk=h?true:(loaded&&(!document.querySelector('x-dc')||el>2500)),imgOk=nd===V.length&&c===im.length;
+if((loaded&&f&&domOk&&imgOk&&el>=MIN)||el>=MAX)finish();else requestAnimationFrame(tick);}
+function reveal(){window.__vkGo=1;dispatchEvent(new Event('vk:reveal'))}
+function end(){L.style.display='none';d.classList.remove('vk-l','vk-lock')}
+function finish(){if(done)return;done=true;
+bar.style.transition='transform .35s cubic-bezier(.22,1,.36,1)';bar.style.transform='scaleX(1)';
+if(RM){setTimeout(function(){reveal();L.classList.add('vk-l-fade');setTimeout(end,320)},250);return;}
+setTimeout(function(){L.classList.add('vk-l-out')},380);
+setTimeout(function(){reveal();L.classList.add('vk-l-up');setTimeout(end,820)},680);}
+requestAnimationFrame(tick);})();
+</script>
+<!--/VK-BODY-->
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="js/main.js"></script>
+</helmet>
+
+<header style="position:fixed;top:0;left:0;right:0;z-index:100;background:{{ headerBg }};backdrop-filter:{{ headerBlur }};-webkit-backdrop-filter:{{ headerBlur }};border-bottom:1px solid {{ headerBorder }};box-shadow:{{ headerShadow }};transition:background 0.25s ease-out, border-color 0.25s ease-out, box-shadow 0.3s ease-out">
+  <div style="max-width:1100px;margin:0 auto;padding:0 24px;height:{{ headerH }};display:flex;align-items:center;justify-content:space-between;gap:24px;transition:height 0.25s ease-out">
+    <a href="index.html" style="display:flex;flex-direction:column;line-height:1;color:#1E2E25;transition:opacity 0.2s ease" style-hover="opacity:0.55">
+      <span style="font-size:21px;font-weight:600;letter-spacing:-0.01em">Vila Katarina</span>
+      <span style="font-size:10px;font-weight:500;letter-spacing:0.28em;color:#6E675B;margin-top:5px">ZLATIBOR</span>
+    </a>
+    <sc-if value="{{ navFull }}" hint-placeholder-val="{{ true }}">
+      <nav style="display:flex;align-items:center;gap:26px;font-size:14px;font-weight:500">
+        <a href="index.html" style="padding:6px 0;background-image:linear-gradient(#2F4A3A,#2F4A3A);background-repeat:no-repeat;background-position:50% 100%;transition:background-size 0.25s ease-out, color 0.25s ease-out;background-size:0% 1.5px;color:#3D3A35" style-hover="color:#2F4A3A;background-size:100% 1.5px">Početna</a>
+        <a href="apartmani.html" style="padding:6px 0;background-image:linear-gradient(#2F4A3A,#2F4A3A);background-repeat:no-repeat;background-position:50% 100%;transition:background-size 0.25s ease-out, color 0.25s ease-out;background-size:0% 1.5px;color:#3D3A35" style-hover="color:#2F4A3A;background-size:100% 1.5px">Apartmani</a>
+        <a href="galerija.html" style="padding:6px 0;background-image:linear-gradient(#2F4A3A,#2F4A3A);background-repeat:no-repeat;background-position:50% 100%;transition:background-size 0.25s ease-out, color 0.25s ease-out;background-size:0% 1.5px;color:#3D3A35" style-hover="color:#2F4A3A;background-size:100% 1.5px">Galerija</a>
+        <a href="cene-i-rezervacija.html" style="padding:6px 0;background-image:linear-gradient(#2F4A3A,#2F4A3A);background-repeat:no-repeat;background-position:50% 100%;transition:background-size 0.25s ease-out, color 0.25s ease-out;background-size:0% 1.5px;color:#3D3A35" style-hover="color:#2F4A3A;background-size:100% 1.5px">Cene i rezervacija</a>
+        <a href="lokacija.html" style="padding:6px 0;background-image:linear-gradient(#2F4A3A,#2F4A3A);background-repeat:no-repeat;background-position:50% 100%;transition:background-size 0.25s ease-out, color 0.25s ease-out;background-size:0% 1.5px;color:#3D3A35" style-hover="color:#2F4A3A;background-size:100% 1.5px">Lokacija</a>
+        <a href="kontakt.html" style="padding:6px 0;background-image:linear-gradient(#2F4A3A,#2F4A3A);background-repeat:no-repeat;background-position:50% 100%;transition:background-size 0.25s ease-out, color 0.25s ease-out;background-size:100% 1.5px;color:#2F4A3A" aria-current="page">Kontakt</a>
+      </nav>
+      <a href="cene-i-rezervacija.html#kalendar" style="background:#2F4A3A;color:#FFFFFF;border-radius:8px;padding:12px 20px;font-size:15px;font-weight:500;transition:background-color 0.25s ease-out, background-size 0.25s ease-out, color 0.25s ease-out, border-color 0.25s ease-out, transform 0.25s ease-out, box-shadow 0.3s ease-out" style-hover="background-color:#1E2E25;color:#FFFFFF;transform:translateY(-2px);box-shadow:0 4px 12px -2px rgba(47,74,58,0.32), 0 10px 28px -4px rgba(47,74,58,0.26), 0 18px 44px -8px rgba(47,74,58,0.16)" style-active="transform:scale(0.98)">Proveri dostupnost</a>
+    </sc-if>
+    <sc-if value="{{ navCompact }}" hint-placeholder-val="{{ false }}">
+      <button onClick="{{ toggleMenu }}" aria-expanded="{{ menuExpanded }}" aria-label="{{ menuLabel }}" style="background:transparent;border:1.5px solid #2F4A3A;color:#2F4A3A;border-radius:8px;height:44px;padding:0 16px;font-size:14px;font-weight:500;cursor:pointer;background-image:linear-gradient(#2F4A3A,#2F4A3A);background-repeat:no-repeat;background-position:0 100%;background-size:100% 0%;transition:background-color 0.25s ease-out, background-size 0.25s ease-out, color 0.25s ease-out, border-color 0.25s ease-out, transform 0.25s ease-out, box-shadow 0.3s ease-out" style-hover="background-size:100% 100%;color:#FFFFFF" style-active="transform:scale(0.98)"><span data-burger="" aria-hidden="true"><i></i><i></i><i></i></span>{{ menuLabel }}</button>
+    </sc-if>
+  </div>
+  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+    <nav data-vk-menu="" data-closing="{{ menuClosingAttr }}" aria-label="Glavni meni" style="position:fixed;left:0;right:0;top:0;height:100dvh;z-index:-1;background:#EAE3D6;padding:calc({{ headerH }} + 12px) 24px calc(24px + env(safe-area-inset-bottom));display:flex;flex-direction:column;overflow-y:auto;overscroll-behavior:contain">
+      <div style="display:flex;flex-direction:column;gap:4px">
+        <a data-vk-mi="" href="index.html" onClick="{{ closeMenu }}" style="display:flex;align-items:center;gap:12px;min-height:56px;font-size:28px;font-weight:500;letter-spacing:-0.01em;color:#1E2E25">Početna</a>
+        <a data-vk-mi="" href="apartmani.html" onClick="{{ closeMenu }}" style="display:flex;align-items:center;gap:12px;min-height:56px;font-size:28px;font-weight:500;letter-spacing:-0.01em;color:#1E2E25">Apartmani</a>
+        <a data-vk-mi="" href="galerija.html" onClick="{{ closeMenu }}" style="display:flex;align-items:center;gap:12px;min-height:56px;font-size:28px;font-weight:500;letter-spacing:-0.01em;color:#1E2E25">Galerija</a>
+        <a data-vk-mi="" href="cene-i-rezervacija.html" onClick="{{ closeMenu }}" style="display:flex;align-items:center;gap:12px;min-height:56px;font-size:28px;font-weight:500;letter-spacing:-0.01em;color:#1E2E25">Cene i rezervacija</a>
+        <a data-vk-mi="" href="lokacija.html" onClick="{{ closeMenu }}" style="display:flex;align-items:center;gap:12px;min-height:56px;font-size:28px;font-weight:500;letter-spacing:-0.01em;color:#1E2E25">Lokacija</a>
+        <a data-vk-mi="" href="kontakt.html" onClick="{{ closeMenu }}" aria-current="page" style="display:flex;align-items:center;gap:12px;min-height:56px;font-size:28px;font-weight:600;letter-spacing:-0.01em;color:#2F4A3A">Kontakt<span aria-hidden="true" style="width:7px;height:7px;border-radius:50%;background:#C9A24B;flex:none"></span></a>
+      </div>
+      <div data-vk-mi="" style="height:1px;background:#D3C8B5;margin:20px 0 24px;flex:none"></div>
+      <a href="cene-i-rezervacija.html#kalendar" onClick="{{ closeMenu }}" data-vk-mi="" style="display:flex;align-items:center;justify-content:center;flex:none;height:52px;background:#2F4A3A;color:#FFFFFF;border-radius:8px;font-size:16px;font-weight:500">Proveri dostupnost</a>
+      <div data-vk-mi="" style="display:flex;justify-content:center;gap:16px;margin-top:24px;flex:none">
+        <a href="tel:+381641234567" aria-label="Pozovi" style="width:52px;height:52px;border-radius:50%;border:1px solid #CFC3AE;background:#F3EEE5;color:#2F4A3A;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02z"></path></svg></a>
+        <a href="viber://chat?number=%2B381641234567" aria-label="Viber" style="width:52px;height:52px;border-radius:50%;border:1px solid #CFC3AE;background:#F3EEE5;color:#2F4A3A;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.4 0C9.473.028 5.333.344 3.02 2.467 1.302 4.187.696 6.7.633 9.817.57 12.933.488 18.776 6.12 20.36h.003l-.004 2.416s-.037.977.61 1.177c.777.242 1.234-.5 1.98-1.302.407-.44.972-1.084 1.397-1.58 3.85.326 6.812-.416 7.15-.525.776-.252 5.176-.816 5.892-6.657.74-6.020-.36-9.830-2.340-11.546-.596-.55-3.006-2.3-8.375-2.323 0 0-.395-.025-1.037-.017zm.058 1.693c.545-.004.88.017.88.017 4.542.02 6.717 1.388 7.222 1.846 1.675 1.435 2.53 4.868 1.906 9.897v.002c-.604 4.878-4.174 5.184-4.832 5.395-.28.09-2.882.737-6.153.524 0 0-2.436 2.94-3.197 3.704-.12.12-.26.167-.352.144-.13-.033-.166-.188-.165-.414l.02-4.018c-4.762-1.32-4.485-6.292-4.43-8.895.054-2.604.543-4.738 1.996-6.173 1.960-1.773 5.474-2.018 7.110-2.030zm.38 2.602c-.167 0-.303.135-.304.302 0 .167.133.303.3.305 1.624.01 2.946.537 4.028 1.592 1.073 1.046 1.62 2.468 1.633 4.334.002.167.14.3.307.3.166-.002.3-.138.3-.304-.014-1.984-.618-3.596-1.816-4.764-1.19-1.16-2.692-1.753-4.447-1.765zm-3.96.695c-.19-.032-.4.005-.616.117l-.01.002c-.43.247-.816.562-1.146.932-.002.004-.006.004-.008.008-.267.323-.42.638-.46.948-.008.046-.01.093-.007.14 0 .136.022.27.065.4l.013.01c.135.48.473 1.276 1.205 2.604.42.768.903 1.5 1.446 2.186.27.344.56.673.87.984l.132.132c.31.308.64.6.984.87.686.543 1.418 1.027 2.186 1.447 1.328.733 2.126 1.07 2.604 1.206l.01.014c.13.042.265.064.402.063.046.002.092 0 .138-.008.31-.036.627-.19.948-.46.004 0 .003-.002.008-.005.37-.33.683-.72.93-1.148l.003-.01c.225-.432.15-.842-.18-1.120-.004 0-.698-.58-1.037-.83-.36-.255-.73-.492-1.113-.71-.51-.285-1.032-.106-1.248.174l-.447.564c-.23.283-.657.246-.657.246-3.120-.796-3.955-3.955-3.955-3.955s-.037-.426.248-.656l.563-.448c.277-.215.456-.737.17-1.248-.217-.383-.454-.756-.71-1.115-.25-.34-.826-1.033-.83-1.035-.137-.165-.31-.265-.502-.297zm4.49.88c-.158.002-.29.124-.3.282-.01.167.115.312.282.324 1.16.085 2.017.466 2.645 1.15.63.688.93 1.524.906 2.57-.002.168.13.306.3.31.166.003.305-.13.31-.297.025-1.175-.334-2.193-1.067-2.994-.74-.81-1.777-1.253-3.050-1.346h-.024zm.463 1.63c-.16.002-.29.127-.3.287-.008.167.12.31.288.32.523.028.875.175 1.113.422.24.245.388.62.416 1.164.01.167.15.295.318.287.167-.008.295-.15.287-.317-.03-.644-.215-1.178-.58-1.557-.367-.378-.893-.574-1.520-.607h-.018z"></path></svg></a>
+        <a href="https://wa.me/381641234567" aria-label="WhatsApp" style="width:52px;height:52px;border-radius:50%;border:1px solid #CFC3AE;background:#F3EEE5;color:#2F4A3A;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg></a>
+      </div>
+      <p data-vk-mi="" style="margin:auto 0 0;padding-top:24px;text-align:center;font-size:13px;color:#6E675B">Ulica Borova 14, Zlatibor</p>
+    </nav>
+  </sc-if>
+</header>
+<div style="height:76px"></div>
+
+<main>
+  <section data-screen-label="Uvod i kontakt" style="padding:clamp(64px,9vw,112px) 24px clamp(72px,10vw,112px)">
+    <div style="max-width:1100px;margin:0 auto">
+      <div style="display:flex;flex-direction:column;align-items:center;text-align:center">
+        <p style="margin:0 0 16px;font-size:13px;font-weight:500;letter-spacing:0.22em;color:#5E7D63">KONTAKT</p>
+        <h1 style="margin:0;font-size:clamp(36px,6vw,56px);line-height:1.1;font-weight:600;letter-spacing:-0.02em;color:#1E2E25;max-width:16ch;text-wrap:balance">Imate pitanje? Tu smo za vas.</h1>
+        <p style="margin:24px 0 0;font-size:17px;line-height:1.7;max-width:560px;text-wrap:balance">Javite se na način koji vam najviše odgovara, odgovaramo brzo.</p>
+        <div style="display:inline-flex;align-items:center;gap:10px;margin-top:24px;padding:8px 16px;border-radius:999px;background:#F3EEE5;border:1px solid #D3C8B5;font-size:14px;color:#3D3A35">
+          <span style="flex:none;width:9px;height:9px;border-radius:50%;background:{{ dot }};box-shadow:0 0 8px 0 {{ dotRing }}"></span>
+          <span>Svakog dana od 08 do 22h<span style="color:#6E675B">{{ nowLabel }}</span></span>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px;margin-top:48px">
+        <a href="tel:+381641234567" onMouseEnter="{{ c0.enter }}" onMouseLeave="{{ c0.leave }}" style="position:relative;display:flex;flex-direction:column;gap:16px;padding:28px 24px 52px;transform:{{ c0.lift }};box-shadow:{{ c0.shadow }};background:#2F4A3A;border-radius:8px;color:#FFFFFF;transition:background-color 0.25s ease-out, background-size 0.25s ease-out, color 0.25s ease-out, border-color 0.25s ease-out, transform 0.25s ease-out, box-shadow 0.3s ease-out" style-hover="background-color:#1E2E25;color:#FFFFFF;transform:translateY(-2px);box-shadow:0 4px 12px -2px rgba(47,74,58,0.32), 0 10px 28px -4px rgba(47,74,58,0.26), 0 18px 44px -8px rgba(47,74,58,0.16)" style-active="transform:scale(0.98)">
+          <svg data-wig="" width="28" height="28" viewBox="0 0 24 24" fill="#C9A24B" aria-hidden="true" style="flex:none;display:block"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02z"></path></svg>
+          <span style="font-size:14px;color:#C3CDBF">Pozovite</span>
+          <span style="font-size:19px;font-weight:500">+381 64 123 4567</span>
+          <span aria-hidden="true" style="position:absolute;right:22px;bottom:18px;font-size:20px;line-height:1;color:#C9A24B;transform:{{ c0.arrow }};transition:transform 0.3s ease">→</span>
+        </a>
+        <a href="viber://chat?number=%2B381641234567" onMouseEnter="{{ c1.enter }}" onMouseLeave="{{ c1.leave }}" style="position:relative;display:flex;flex-direction:column;gap:16px;padding:28px 24px 52px;transform:{{ c1.lift }};box-shadow:{{ c1.shadow }};transition:transform 0.3s ease, box-shadow 0.3s ease, background 0.2s ease, border-color 0.2s ease;background:#F3EEE5;border:1px solid #D3C8B5;border-radius:8px;color:#1E2E25" style-hover="border-color:#2F4A3A;color:#1E2E25">
+          <svg data-wig="" width="28" height="28" viewBox="0 0 24 24" fill="#5E7D63" aria-hidden="true" style="flex:none;display:block"><path d="M11.4 0C9.473.028 5.333.344 3.02 2.467 1.302 4.187.696 6.7.633 9.817.57 12.933.488 18.776 6.12 20.36h.003l-.004 2.416s-.037.977.61 1.177c.777.242 1.234-.5 1.98-1.302.407-.44.972-1.084 1.397-1.58 3.85.326 6.812-.416 7.15-.525.776-.252 5.176-.816 5.892-6.657.74-6.020-.36-9.830-2.340-11.546-.596-.55-3.006-2.3-8.375-2.323 0 0-.395-.025-1.037-.017zm.058 1.693c.545-.004.88.017.88.017 4.542.02 6.717 1.388 7.222 1.846 1.675 1.435 2.53 4.868 1.906 9.897v.002c-.604 4.878-4.174 5.184-4.832 5.395-.28.09-2.882.737-6.153.524 0 0-2.436 2.94-3.197 3.704-.12.12-.26.167-.352.144-.13-.033-.166-.188-.165-.414l.02-4.018c-4.762-1.32-4.485-6.292-4.43-8.895.054-2.604.543-4.738 1.996-6.173 1.960-1.773 5.474-2.018 7.110-2.030zm.38 2.602c-.167 0-.303.135-.304.302 0 .167.133.303.3.305 1.624.01 2.946.537 4.028 1.592 1.073 1.046 1.62 2.468 1.633 4.334.002.167.14.3.307.3.166-.002.3-.138.3-.304-.014-1.984-.618-3.596-1.816-4.764-1.19-1.16-2.692-1.753-4.447-1.765zm-3.96.695c-.19-.032-.4.005-.616.117l-.01.002c-.43.247-.816.562-1.146.932-.002.004-.006.004-.008.008-.267.323-.42.638-.46.948-.008.046-.01.093-.007.14 0 .136.022.27.065.4l.013.01c.135.48.473 1.276 1.205 2.604.42.768.903 1.5 1.446 2.186.27.344.56.673.87.984l.132.132c.31.308.64.6.984.87.686.543 1.418 1.027 2.186 1.447 1.328.733 2.126 1.07 2.604 1.206l.01.014c.13.042.265.064.402.063.046.002.092 0 .138-.008.31-.036.627-.19.948-.46.004 0 .003-.002.008-.005.37-.33.683-.72.93-1.148l.003-.01c.225-.432.15-.842-.18-1.120-.004 0-.698-.58-1.037-.83-.36-.255-.73-.492-1.113-.71-.51-.285-1.032-.106-1.248.174l-.447.564c-.23.283-.657.246-.657.246-3.120-.796-3.955-3.955-3.955-3.955s-.037-.426.248-.656l.563-.448c.277-.215.456-.737.17-1.248-.217-.383-.454-.756-.71-1.115-.25-.34-.826-1.033-.83-1.035-.137-.165-.31-.265-.502-.297zm4.49.88c-.158.002-.29.124-.3.282-.01.167.115.312.282.324 1.16.085 2.017.466 2.645 1.15.63.688.93 1.524.906 2.57-.002.168.13.306.3.31.166.003.305-.13.31-.297.025-1.175-.334-2.193-1.067-2.994-.74-.81-1.777-1.253-3.050-1.346h-.024zm.463 1.63c-.16.002-.29.127-.3.287-.008.167.12.31.288.32.523.028.875.175 1.113.422.24.245.388.62.416 1.164.01.167.15.295.318.287.167-.008.295-.15.287-.317-.03-.644-.215-1.178-.58-1.557-.367-.378-.893-.574-1.520-.607h-.018z"></path></svg>
+          <span style="font-size:14px;color:#6E675B">Viber</span>
+          <span style="font-size:19px;font-weight:500">Pošalji poruku</span>
+          <span aria-hidden="true" style="position:absolute;right:22px;bottom:18px;font-size:20px;line-height:1;color:#2F4A3A;transform:{{ c1.arrow }};transition:transform 0.3s ease">→</span>
+        </a>
+        <a href="https://wa.me/381641234567" target="_blank" rel="noopener" onMouseEnter="{{ c2.enter }}" onMouseLeave="{{ c2.leave }}" style="position:relative;display:flex;flex-direction:column;gap:16px;padding:28px 24px 52px;transform:{{ c2.lift }};box-shadow:{{ c2.shadow }};transition:transform 0.3s ease, box-shadow 0.3s ease, background 0.2s ease, border-color 0.2s ease;background:#F3EEE5;border:1px solid #D3C8B5;border-radius:8px;color:#1E2E25" style-hover="border-color:#2F4A3A;color:#1E2E25">
+          <svg data-wig="" width="28" height="28" viewBox="0 0 24 24" fill="#5E7D63" aria-hidden="true" style="flex:none;display:block"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg>
+          <span style="font-size:14px;color:#6E675B">WhatsApp</span>
+          <span style="font-size:19px;font-weight:500">Pošalji poruku</span>
+          <span aria-hidden="true" style="position:absolute;right:22px;bottom:18px;font-size:20px;line-height:1;color:#2F4A3A;transform:{{ c2.arrow }};transition:transform 0.3s ease">→</span>
+        </a>
+        <a href="mailto:info@vilakatarina.rs" onMouseEnter="{{ c3.enter }}" onMouseLeave="{{ c3.leave }}" style="position:relative;display:flex;flex-direction:column;gap:16px;padding:28px 24px 52px;transform:{{ c3.lift }};box-shadow:{{ c3.shadow }};transition:transform 0.3s ease, box-shadow 0.3s ease, background 0.2s ease, border-color 0.2s ease;background:#F3EEE5;border:1px solid #D3C8B5;border-radius:8px;color:#1E2E25" style-hover="border-color:#2F4A3A;color:#1E2E25">
+          <svg data-wig="" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#5E7D63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg>
+          <span style="font-size:14px;color:#6E675B">Email</span>
+          <span style="font-size:17px;font-weight:500;word-break:break-word">info@vilakatarina.rs</span>
+          <span aria-hidden="true" style="position:absolute;right:22px;bottom:18px;font-size:20px;line-height:1;color:#2F4A3A;transform:{{ c3.arrow }};transition:transform 0.3s ease">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Domaćini" style="padding:clamp(72px,10vw,112px) 24px;background:#DFD5C4">
+    <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:clamp(40px,6vw,80px);align-items:center">
+      <div style="position:relative;aspect-ratio:5/4;max-height:520px;width:100%;border-radius:8px;overflow:hidden;background:#EAE3D6">
+        <img loading="eager" decoding="async" src="images/katarina-i-milan.webp" width="1122" height="1402" alt="Katarina i Milan Jovanović ispred vile" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 60%;display:block" fetchpriority="high">
+      </div>
+      <div>
+        <p style="margin:0 0 16px;font-size:13px;font-weight:500;letter-spacing:0.22em;color:#5E7D63">VAŠI DOMAĆINI</p>
+        <h2 style="margin:0;font-size:clamp(28px,4vw,40px);line-height:1.2;font-weight:600;letter-spacing:-0.015em;color:#1E2E25">Katarina i Milan Jovanović</h2>
+        <p style="margin:24px 0 0;font-size:17px;line-height:1.7;max-width:52ch;text-wrap:pretty">Vilu vodimo sami, kao porodica. Kada pozovete, javiće vam se jedno od nas dvoje, i isti ljudi će vas dočekati na vratima.</p>
+        <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:32px;border-top:1px solid #C9BDA8">
+          <div style="padding:20px 16px 0 0">
+            <div style="font-size:clamp(26px,3.2vw,34px);line-height:1.25;font-weight:600;color:#1E2E25">10+</div>
+            <div style="margin-top:6px;font-size:14px;line-height:1.5;color:#6E675B">godina dočekujemo goste</div>
+          </div>
+          <div style="padding:20px 16px 0;border-left:1px solid #C9BDA8">
+            <div style="font-size:clamp(26px,3.2vw,34px);line-height:1.25;font-weight:600;color:#1E2E25">500+</div>
+            <div style="margin-top:6px;font-size:14px;line-height:1.5;color:#6E675B">zadovoljnih gostiju</div>
+          </div>
+          <div style="padding:20px 0 0 16px;border-left:1px solid #C9BDA8">
+            <div style="font-size:min(clamp(26px,3.2vw,34px),6.2vw);line-height:calc(clamp(26px,3.2vw,34px) * 1.25);font-weight:600;color:#1E2E25;white-space:nowrap">SR · EN</div>
+            <div style="margin-top:6px;font-size:14px;line-height:1.5;color:#6E675B">Govorimo srpski i engleski</div>
+          </div>
+        </div>
+        <p style="margin:32px 0 0;font-size:17px;font-style:italic;color:#3D3A35">— Katarina i Milan</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Forma" style="padding:clamp(72px,10vw,112px) 24px">
+    <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:{{ formCols }};gap:clamp(40px,6vw,72px);align-items:center">
+      <div>
+        <p style="margin:0 0 16px;font-size:13px;font-weight:500;letter-spacing:0.22em;color:#5E7D63">PORUKA</p>
+        <h2 style="margin:0;font-size:clamp(28px,4vw,40px);line-height:1.2;font-weight:600;letter-spacing:-0.015em;color:#1E2E25">Pišite nam</h2>
+        <p style="margin:24px 0 0;font-size:17px;line-height:1.7;max-width:44ch;text-wrap:pretty">Imate pitanje o apartmanima, okolini ili posebnoj prilici? Pišite nam i javljamo se u roku od sat vremena.</p>
+        <div style="display:flex;align-items:flex-start;gap:12px;margin-top:32px;padding-top:24px;border-top:1px solid #D3C8B5">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5E7D63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21zM12 7a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z"></path></svg>
+          <span style="font-size:16px;line-height:1.5;color:#1E2E25">Ulica Borova 14, 31315 Zlatibor, Srbija</span>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:24px">
+          <a href="https://instagram.com/vilakatarina.zlatibor" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;font-size:15px;font-weight:500;color:#1E2E25" style-hover="color:#2F4A3A">
+            <span style="flex:none;width:44px;height:44px;border-radius:50%;background:#DCE3D6;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2F4A3A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M8 3h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5zM12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8zM17.5 6.5h.01"></path></svg></span>Instagram
+          </a>
+          <a href="https://facebook.com/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;font-size:15px;font-weight:500;color:#1E2E25" style-hover="color:#2F4A3A">
+            <span style="flex:none;width:44px;height:44px;border-radius:50%;background:#DCE3D6;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2F4A3A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M15 3h-2.5A3.5 3.5 0 0 0 9 6.5V9H7v3h2v9h3v-9h2.5l.5-3h-3V7a1 1 0 0 1 1-1H15z"></path></svg></span>Facebook
+          </a>
+        </div>
+      </div>
+      <div style="background:#F3EEE5;border:1px solid #D3C8B5;border-radius:8px;padding:clamp(24px,4vw,40px)">
+        <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;padding:clamp(16px,4vw,40px) 0">
+            <span style="width:64px;height:64px;border-radius:50%;background:#DCE3D6;display:flex;align-items:center;justify-content:center"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#2F4A3A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>
+            <p style="margin:0;font-size:22px;font-weight:500;line-height:1.4;color:#1E2E25;max-width:26ch;text-wrap:balance">Hvala na poruci! Javićemo vam se u roku od sat vremena.</p>
+            <button onClick="{{ reset }}" style="margin-top:8px;height:48px;padding:0 22px;border:1.5px solid #2F4A3A;background:transparent;color:#2F4A3A;border-radius:8px;font-size:15px;font-weight:500;cursor:pointer;background-image:linear-gradient(#2F4A3A,#2F4A3A);background-repeat:no-repeat;background-position:0 100%;background-size:100% 0%;transition:background-color 0.25s ease-out, background-size 0.25s ease-out, color 0.25s ease-out, border-color 0.25s ease-out, transform 0.25s ease-out, box-shadow 0.3s ease-out" style-hover="background-size:100% 100%;color:#FFFFFF" style-active="transform:scale(0.98)">Pošalji novu poruku</button>
+          </div>
+        </sc-if>
+        <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+          <form onSubmit="{{ submit }}" noValidate="{{ true }}" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:20px">
+            <label style="grid-column:1/-1;display:flex;flex-direction:column;gap:8px;font-size:13px;font-weight:500;color:#6E675B">Ime i prezime
+              <span style="position:relative;display:block"><input data-f="" data-bad="{{ bad.name }}" onBlur="{{ blur.name }}" value="{{ f.name }}" onChange="{{ on.name }}" placeholder="Marija Petrović" style="height:50px;padding:0 40px 0 14px;background:#F6F2EB;border:1px solid {{ eb.name }};border-radius:8px;font-size:15px;color:#3D3A35;outline:none" style-focus="border-color:#2F4A3A"></input><svg data-ok="{{ okm.name }}" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4F7A55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><sc-if value="{{ emsg.name }}" hint-placeholder-val="{{ false }}"><span style="font-size:12px;font-weight:400;color:#B5503C">{{ emsg.name }}</span></sc-if>
+            </label>
+            <label style="display:flex;flex-direction:column;gap:8px;font-size:13px;font-weight:500;color:#6E675B">Email
+              <span style="position:relative;display:block"><input data-f="" data-bad="{{ bad.email }}" onBlur="{{ blur.email }}" type="email" value="{{ f.email }}" onChange="{{ on.email }}" placeholder="marija@gmail.com" style="height:50px;padding:0 40px 0 14px;background:#F6F2EB;border:1px solid {{ eb.email }};border-radius:8px;font-size:15px;color:#3D3A35;outline:none" style-focus="border-color:#2F4A3A"></input><svg data-ok="{{ okm.email }}" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4F7A55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><sc-if value="{{ emsg.email }}" hint-placeholder-val="{{ false }}"><span style="font-size:12px;font-weight:400;color:#B5503C">{{ emsg.email }}</span></sc-if>
+            </label>
+            <label style="display:flex;flex-direction:column;gap:8px;font-size:13px;font-weight:500;color:#6E675B">Telefon (opciono)
+              <span style="position:relative;display:block"><input data-f="" data-bad="{{ bad.phone }}" onBlur="{{ blur.phone }}" type="tel" value="{{ f.phone }}" onChange="{{ on.phone }}" placeholder="+381 6x xxx xxxx" style="height:50px;padding:0 40px 0 14px;background:#F6F2EB;border:1px solid #CFC3AE;border-radius:8px;font-size:15px;color:#3D3A35;outline:none" style-focus="border-color:#2F4A3A"></input><svg data-ok="{{ okm.phone }}" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4F7A55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><sc-if value="{{ emsg.phone }}" hint-placeholder-val="{{ false }}"><span style="font-size:12px;font-weight:400;color:#B5503C">{{ emsg.phone }}</span></sc-if>
+            </label>
+            <div style="grid-column:1/-1;display:flex;flex-direction:column;gap:8px;font-size:13px;font-weight:500;color:#6E675B">Tema
+            <dc-import name="Dropdown" options="{{ topics }}" on-change="{{ on.topic }}" hint-size="100%,50px"></dc-import>
+          </div>
+            <label style="grid-column:1/-1;display:flex;flex-direction:column;gap:8px;font-size:13px;font-weight:500;color:#6E675B">Poruka
+              <textarea data-f="" data-bad="{{ bad.msg }}" onBlur="{{ blur.msg }}" value="{{ f.msg }}" onChange="{{ on.msg }}" placeholder="Vaše pitanje..." style="padding:12px 14px;background:#F6F2EB;border:1px solid {{ eb.msg }};border-radius:8px;font-size:15px;line-height:1.6;color:#3D3A35;outline:none;resize:vertical" style-focus="border-color:#2F4A3A"></textarea>
+            </label>
+            <sc-if value="{{ errMsg }}" hint-placeholder-val="{{ false }}">
+              <p style="grid-column:1/-1;margin:0;padding:14px 16px;border:1px solid #B5503C;border-radius:8px;font-size:15px;line-height:1.5;color:#B5503C">{{ errMsg }}</p>
+            </sc-if>
+            <button type="submit" style="grid-column:1/-1;height:54px;background:#2F4A3A;color:#FFFFFF;border:0;border-radius:8px;font-size:15px;font-weight:500;cursor:pointer;transition:background-color 0.25s ease-out, background-size 0.25s ease-out, color 0.25s ease-out, border-color 0.25s ease-out, transform 0.25s ease-out, box-shadow 0.3s ease-out" style-hover="background-color:#1E2E25;color:#FFFFFF;transform:translateY(-2px);box-shadow:0 4px 12px -2px rgba(47,74,58,0.32), 0 10px 28px -4px rgba(47,74,58,0.26), 0 18px 44px -8px rgba(47,74,58,0.16)" style-active="transform:scale(0.98)" disabled="{{ sending }}"><sc-if value="{{ sending }}" hint-placeholder-val="{{ false }}"><span data-spin="" aria-label="Šalje se"></span></sc-if><sc-if value="{{ notSending }}" hint-placeholder-val="{{ true }}">Pošalji poruku</sc-if></button>
+          </form>
+        </sc-if>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Mapa" style="padding:0 24px clamp(72px,10vw,112px)">
+    <div style="max-width:1100px;margin:0 auto;position:relative">
+      <div style="position:relative;aspect-ratio:{{ mapAr }};border-radius:12px;overflow:hidden;background:#EAE3D6;box-shadow:0 14px 36px rgba(30,46,37,0.12)">
+        <img loading="eager" decoding="async" src="images/karta-zlatibora-siroka.png" width="1916" height="821" alt="Ilustrovana karta Zlatibora sa Vilom Katarinom, centrom i Tornikom" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%;display:block">
+      </div>
+      <div style="position:{{ mapCardPos }};left:{{ mapCardOff }};bottom:{{ mapCardOff }};margin-top:{{ mapCardMt }};max-width:340px;padding:22px 24px;border-radius:10px;background:#F3EEE5;border:1px solid #D3C8B5;box-shadow:0 8px 24px rgba(30,46,37,0.14)">
+        <div style="display:flex;align-items:flex-start;gap:10px">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2F4A3A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21zM12 7a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z"></path></svg>
+          <div>
+            <div style="font-size:16px;font-weight:500;color:#1E2E25">Vila Katarina</div>
+            <div style="margin-top:2px;font-size:14px;line-height:1.5;color:#6E675B">Ulica Borova 14, 31315 Zlatibor</div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:flex-start;gap:8px;margin-top:16px;padding-top:14px;border-top:1px solid #D3C8B5;font-size:14px;font-weight:500">
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Borova+14+31315+Zlatibor" target="_blank" rel="noopener" style="color:#2F4A3A;background-image:linear-gradient(currentColor,currentColor);background-repeat:no-repeat;background-position:0 100%;background-size:0% 1px;padding-bottom:2px;transition:background-color 0.25s ease-out, background-size 0.25s ease-out, color 0.25s ease-out, border-color 0.25s ease-out, transform 0.25s ease-out, box-shadow 0.3s ease-out" style-hover="color:#C9A24B;background-size:100% 1px">Otvori u Google mapama <span data-arrow="" style="display:inline-block;transition:transform 0.25s ease-out">→</span></a>
+          <a href="lokacija.html" style="color:#2F4A3A;background-image:linear-gradient(currentColor,currentColor);background-repeat:no-repeat;background-position:0 100%;background-size:0% 1px;padding-bottom:2px;transition:background-color 0.25s ease-out, background-size 0.25s ease-out, color 0.25s ease-out, border-color 0.25s ease-out, transform 0.25s ease-out, box-shadow 0.3s ease-out" style-hover="color:#C9A24B;background-size:100% 1px">Pogledaj okolinu <span data-arrow="" style="display:inline-block;transition:transform 0.25s ease-out">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Česta pitanja" style="padding:clamp(72px,10vw,112px) 24px;background:#DFD5C4">
+    <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:{{ faqCols }};gap:clamp(32px,5vw,64px);align-items:start">
+      <div style="position:{{ faqPos }};top:110px">
+        <p style="margin:0 0 16px;font-size:13px;font-weight:500;letter-spacing:0.22em;color:#5E7D63">FAQ</p>
+        <h2 style="margin:0;font-size:clamp(28px,4vw,40px);line-height:1.2;font-weight:600;letter-spacing:-0.015em;color:#1E2E25">Česta pitanja</h2>
+        <p style="margin:20px 0 0;font-size:16px;line-height:1.7;color:#3D3A35;max-width:34ch;text-wrap:pretty">Odgovori na pitanja koja nam gosti najčešće postavljaju.</p>
+        <div style="margin-top:28px;padding:24px;border-radius:8px;background:#F3EEE5;border:1px solid #C9BDA8">
+          <div style="font-size:17px;font-weight:500;color:#1E2E25">Niste našli odgovor?</div>
+          <a href="tel:+381641234567" style="margin-top:16px;display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 20px;border:1.5px solid #2F4A3A;border-radius:8px;color:#2F4A3A;font-size:15px;font-weight:500;white-space:nowrap;background-image:linear-gradient(#2F4A3A,#2F4A3A);background-repeat:no-repeat;background-position:0 100%;background-size:100% 0%;transition:background-color 0.25s ease-out, background-size 0.25s ease-out, color 0.25s ease-out, border-color 0.25s ease-out, transform 0.25s ease-out, box-shadow 0.3s ease-out" style-hover="background-size:100% 100%;color:#FFFFFF" style-active="transform:scale(0.98)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M5 4h3.5l1.5 4.5-2 1.3a11 11 0 0 0 6.2 6.2l1.3-2 4.5 1.5V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"></path></svg>Pozovite nas</a>
+        </div>
+      </div>
+      <div style="border-top:1px solid #C9BDA8">
+        <sc-for list="{{ faq }}" as="q" hint-placeholder-count="7">
+          <div style="border-bottom:1px solid #C9BDA8">
+            <button onClick="{{ q.toggle }}" aria-expanded="{{ q.expanded }}" style="width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;background:transparent;border:0;text-align:left;font-size:17px;font-weight:500;color:#1E2E25;cursor:pointer">
+              <span>{{ q.q }}</span>
+              <span style="flex:none;width:28px;height:28px;display:flex;align-items:center;justify-content:center;border:1px solid #C9BDA8;border-radius:6px;font-size:18px;font-weight:400;color:#2F4A3A"><span style="display:block;line-height:1;transform:{{ q.rot }};transition:transform 0.3s ease">+</span></span>
+            </button>
+            <div style="display:grid;grid-template-rows:{{ q.rows }};opacity:{{ q.op }};transition:grid-template-rows 0.35s ease, opacity 0.3s ease">
+              <div style="overflow:hidden;min-height:0">
+                <p style="margin:0;padding:0 44px 24px 0;font-size:16px;line-height:1.7;color:#3D3A35;max-width:62ch">{{ q.a }}</p>
+              </div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Poziv" style="position:relative;overflow:hidden;display:flex;align-items:center;min-height:440px;padding:clamp(64px,8vw,88px) 24px;background:#2F4A3A;color:#F3EEE5">
+    <img loading="eager" decoding="async" src="images/vila-pod-snegom-rezervacija.webp" width="1670" height="941" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+    <div aria-hidden="true" style="position:absolute;inset:0;background:rgba(30,46,37,0.75)"></div>
+    <div style="position:relative;max-width:720px;margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center">
+      <p style="margin:0 0 16px;font-size:13px;font-weight:500;letter-spacing:0.22em;color:#C3CDBF">REZERVACIJA</p>
+      <h2 style="margin:0;font-size:clamp(28px,4vw,44px);line-height:1.18;font-weight:600;letter-spacing:-0.015em;color:#FFFFFF;text-wrap:balance">Spremni za odmor na Zlatiboru?</h2>
+      <p style="margin:18px 0 0;font-size:17px;line-height:1.7;color:#F3EEE5;max-width:560px;text-wrap:balance">Proverite slobodne termine i pošaljite upit. Javljamo se u roku od sat vremena.</p>
+      <div style="margin-top:32px;display:flex;flex-direction:{{ ctaBtnDir }};gap:12px;width:{{ ctaBtnW }};justify-content:center">
+        <a href="cene-i-rezervacija.html#kalendar" style="display:inline-flex;align-items:center;justify-content:center;height:52px;padding:0 28px;background:#C9A24B;color:#1E2E25;border-radius:8px;font-size:15px;font-weight:500;white-space:nowrap;background-image:linear-gradient(110deg,rgba(255,255,255,0) 35%,rgba(255,255,255,0.5) 50%,rgba(255,255,255,0) 65%);background-size:250% 100%;background-position:130% 0;background-repeat:no-repeat;transition:background-color 0.25s ease-out, background-size 0.25s ease-out, color 0.25s ease-out, border-color 0.25s ease-out, transform 0.25s ease-out, box-shadow 0.3s ease-out" style-hover="background-color:#B38E3A;color:#1E2E25;transform:translateY(-2px);box-shadow:0 4px 12px -2px rgba(201,162,75,0.35), 0 10px 32px -4px rgba(201,162,75,0.3), 0 18px 48px -8px rgba(201,162,75,0.2);background-position:-30% 0;transition:background-color 0.25s ease-out, background-size 0.25s ease-out, color 0.25s ease-out, border-color 0.25s ease-out, transform 0.25s ease-out, box-shadow 0.3s ease-out, background-position 0.75s ease-out" style-active="transform:scale(0.98)">Proveri dostupnost</a>
+        <a href="apartmani.html" style="display:inline-flex;align-items:center;justify-content:center;height:52px;padding:0 26px;border:1.5px solid #F3EEE5;color:#F3EEE5;border-radius:8px;font-size:15px;font-weight:500;white-space:nowrap;background-image:linear-gradient(#F3EEE5,#F3EEE5);background-repeat:no-repeat;background-position:0 100%;background-size:100% 0%;transition:background-color 0.25s ease-out, background-size 0.25s ease-out, color 0.25s ease-out, border-color 0.25s ease-out, transform 0.25s ease-out, box-shadow 0.3s ease-out" style-hover="background-size:100% 100%;color:#2F4A3A" style-active="transform:scale(0.98)">Pogledaj apartmane</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer style="background:#1E2E25;color:#F3EEE5;padding:72px 24px 40px">
+  <div style="max-width:1100px;margin:0 auto">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:40px">
+      <div>
+        <div style="font-size:21px;font-weight:600;color:#FFFFFF">Vila Katarina</div>
+        <div style="font-size:10px;font-weight:500;letter-spacing:0.28em;color:#C3CDBF;margin-top:6px">ZLATIBOR</div>
+        <p style="margin:20px 0 0;font-size:15px;line-height:1.7;color:#C3CDBF">Ulica Borova 14<br>31315 Zlatibor</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:15px">
+        <div style="font-size:13px;letter-spacing:0.18em;color:#C3CDBF;margin-bottom:6px">STRANICE</div>
+        <a href="apartmani.html" style="color:#F3EEE5" style-hover="color:#C9A24B">Apartmani</a>
+        <a href="galerija.html" style="color:#F3EEE5" style-hover="color:#C9A24B">Galerija</a>
+        <a href="cene-i-rezervacija.html" style="color:#F3EEE5" style-hover="color:#C9A24B">Cene i rezervacija</a>
+        <a href="lokacija.html" style="color:#F3EEE5" style-hover="color:#C9A24B">Lokacija</a>
+        <a href="kontakt.html" style="color:#F3EEE5" style-hover="color:#C9A24B">Kontakt</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:15px">
+        <div style="font-size:13px;letter-spacing:0.18em;color:#C3CDBF;margin-bottom:6px">KONTAKT</div>
+        <a href="tel:+381641234567" style="color:#F3EEE5" style-hover="color:#C9A24B">+381 64 123 4567</a>
+        <span style="color:#C3CDBF;white-space:nowrap">Viber i WhatsApp</span>
+        <a href="mailto:info@vilakatarina.rs" style="color:#F3EEE5" style-hover="color:#C9A24B">info@vilakatarina.rs</a>
+        <a href="https://instagram.com/vilakatarina.zlatibor" style="display:inline-flex;align-items:center;gap:8px;color:#F3EEE5" style-hover="color:#C9A24B"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.6"></circle></svg>@vilakatarina.zlatibor</a>
+      </div>
+      <a href="lokacija.html" aria-label="Lokacija vile na mapi" style="position:relative;display:block;aspect-ratio:3/2;align-self:start;border:1px solid #2F4A3A;border-radius:8px;overflow:hidden;background:#1E2E25;transition:opacity 0.2s ease" style-hover="opacity:0.85">
+        <img loading="eager" decoding="async" src="images/mini-mapa-v2.png" width="1536" height="1024" alt="Mini mapa: Vila Katarina, centar Zlatibora i Gold gondola" style="display:block;width:100%;height:100%;object-fit:cover"></img>
+      </a>
+    </div>
+    <div style="margin-top:56px;padding-top:24px;border-top:1px solid #2F4A3A;font-size:13px;color:#C3CDBF;text-align:center">© 2026 Vila Katarina. Sva prava zadržana.</div>
+  </div>
+</footer>
+
+<sc-if value="{{ stickyVisible }}" hint-placeholder-val="{{ false }}">
+  <div data-vk-sticky="" style="position:fixed;left:0;right:0;bottom:0;z-index:60;background:#F3EEE5;border-top:1px solid #D3C8B5;box-shadow:0 -6px 20px -6px rgba(30,46,37,0.14);padding:8px 12px calc(8px + env(safe-area-inset-bottom));display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;align-items:stretch;transition:transform 0.3s ease-out, opacity 0.3s ease-out">
+    <a href="tel:+381641234567" aria-label="Pozovi" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;height:52px;min-width:0;border:1px solid #2F4A3A;border-radius:8px;background:#2F4A3A;font-size:13px;font-weight:500;line-height:1;color:#FFFFFF;white-space:nowrap"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="flex:none;display:block"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02z"></path></svg><span>Pozovi</span></a>
+    <a href="viber://chat?number=%2B381641234567" aria-label="Viber" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;height:52px;min-width:0;border:1px solid #CFC3AE;border-radius:8px;background:#FBF8F2;font-size:13px;font-weight:500;line-height:1;color:#2F4A3A;white-space:nowrap"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="flex:none;display:block"><path d="M11.4 0C9.473.028 5.333.344 3.02 2.467 1.302 4.187.696 6.7.633 9.817.57 12.933.488 18.776 6.12 20.36h.003l-.004 2.416s-.037.977.61 1.177c.777.242 1.234-.5 1.98-1.302.407-.44.972-1.084 1.397-1.58 3.85.326 6.812-.416 7.15-.525.776-.252 5.176-.816 5.892-6.657.74-6.020-.36-9.830-2.340-11.546-.596-.55-3.006-2.3-8.375-2.323 0 0-.395-.025-1.037-.017zm.058 1.693c.545-.004.88.017.88.017 4.542.02 6.717 1.388 7.222 1.846 1.675 1.435 2.53 4.868 1.906 9.897v.002c-.604 4.878-4.174 5.184-4.832 5.395-.28.09-2.882.737-6.153.524 0 0-2.436 2.94-3.197 3.704-.12.12-.26.167-.352.144-.13-.033-.166-.188-.165-.414l.02-4.018c-4.762-1.32-4.485-6.292-4.43-8.895.054-2.604.543-4.738 1.996-6.173 1.960-1.773 5.474-2.018 7.110-2.030zm.38 2.602c-.167 0-.303.135-.304.302 0 .167.133.303.3.305 1.624.01 2.946.537 4.028 1.592 1.073 1.046 1.62 2.468 1.633 4.334.002.167.14.3.307.3.166-.002.3-.138.3-.304-.014-1.984-.618-3.596-1.816-4.764-1.19-1.16-2.692-1.753-4.447-1.765zm-3.96.695c-.19-.032-.4.005-.616.117l-.01.002c-.43.247-.816.562-1.146.932-.002.004-.006.004-.008.008-.267.323-.42.638-.46.948-.008.046-.01.093-.007.14 0 .136.022.27.065.4l.013.01c.135.48.473 1.276 1.205 2.604.42.768.903 1.5 1.446 2.186.27.344.56.673.87.984l.132.132c.31.308.64.6.984.87.686.543 1.418 1.027 2.186 1.447 1.328.733 2.126 1.07 2.604 1.206l.01.014c.13.042.265.064.402.063.046.002.092 0 .138-.008.31-.036.627-.19.948-.46.004 0 .003-.002.008-.005.37-.33.683-.72.93-1.148l.003-.01c.225-.432.15-.842-.18-1.120-.004 0-.698-.58-1.037-.83-.36-.255-.73-.492-1.113-.71-.51-.285-1.032-.106-1.248.174l-.447.564c-.23.283-.657.246-.657.246-3.120-.796-3.955-3.955-3.955-3.955s-.037-.426.248-.656l.563-.448c.277-.215.456-.737.17-1.248-.217-.383-.454-.756-.71-1.115-.25-.34-.826-1.033-.83-1.035-.137-.165-.31-.265-.502-.297zm4.49.88c-.158.002-.29.124-.3.282-.01.167.115.312.282.324 1.16.085 2.017.466 2.645 1.15.63.688.93 1.524.906 2.57-.002.168.13.306.3.31.166.003.305-.13.31-.297.025-1.175-.334-2.193-1.067-2.994-.74-.81-1.777-1.253-3.050-1.346h-.024zm.463 1.63c-.16.002-.29.127-.3.287-.008.167.12.31.288.32.523.028.875.175 1.113.422.24.245.388.62.416 1.164.01.167.15.295.318.287.167-.008.295-.15.287-.317-.03-.644-.215-1.178-.58-1.557-.367-.378-.893-.574-1.520-.607h-.018z"></path></svg><span>Viber</span></a>
+    <a href="https://wa.me/381641234567" aria-label="WhatsApp" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;height:52px;min-width:0;border:1px solid #CFC3AE;border-radius:8px;background:#FBF8F2;font-size:13px;font-weight:500;line-height:1;color:#2F4A3A;white-space:nowrap"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="flex:none;display:block"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg><span>WhatsApp</span></a>
+  </div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showStickyBar&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Mobilni&quot;}}">
+const BDF = typeof CSS !== 'undefined' && !!CSS.supports && (CSS.supports('backdrop-filter', 'blur(1px)') || CSS.supports('-webkit-backdrop-filter', 'blur(1px)'));
+const VKI = n => 'images/' + n + (["karta-zlatibora","karta-zlatibora-siroka","mini-mapa-v2"].includes(n) ? '.png' : '.webp');
+const FAQ = [
+  ['Da li su kućni ljubimci dozvoljeni?', 'Da, po prethodnom dogovoru, uz doplatu od 5 € po noćenju.'],
+  ['Da li postoji parking?', 'Da, besplatan i obezbeđen u dvorištu vile.'],
+  ['Kada je check-in i check-out?', 'Check-in od 14h, check-out do 11h. Raniji dolazak ili kasniji odlazak po dogovoru.'],
+  ['Da li je posteljina uključena?', 'Da, posteljina i peškiri su uključeni u cenu.'],
+  ['Kako se potvrđuje rezervacija?', 'Uplatom depozita od 30%, nakon čega dobijate potvrdu emailom.'],
+  ['Da li ima mesta za ski opremu?', 'Da, vila ima ostavu za skije i pancerice.'],
+  ['Da li možete da nas sačekate na autobuskoj stanici?', 'Da, na upit.']
+];
+const TOPICS = ['Rezervacija', 'Pitanje o apartmanu', 'Postojeća rezervacija', 'Ostalo'];
+
+class Component extends DCLogic {
+  state = { w: typeof window !== 'undefined' ? window.innerWidth : 1200, menuOpen: false, open: 0, f: { name: '', email: '', phone: '', topic: 'Rezervacija', msg: '' }, errs: {}, errMsg: '', sent: false };
+  componentDidMount() {
+    this.onResize = () => window.innerWidth !== this.state.w && this.setState({ w: window.innerWidth });
+    window.addEventListener('resize', this.onResize, { passive: true });
+    this.onScroll = () => { if (window.__vkLockY && window.__vkLockY() !== null) return; const sc = window.scrollY > 8; if (sc !== this.state.scrolled) this.setState({ scrolled: sc }); };
+    this.unScroll = window.__vkScroll ? window.__vkScroll(this.onScroll) : (window.addEventListener('scroll', this.onScroll, { passive: true }), () => window.removeEventListener('scroll', this.onScroll));
+    this.onScroll();
+    this.clock = setInterval(() => this.forceUpdate(), 60000);
+  }
+  componentWillUnmount() { clearInterval(this.clock); window.removeEventListener('resize', this.onResize); this.unScroll && this.unScroll(); }
+  closeMenuAnim() { if (!this.state.menuOpen || this.state.menuClosing) return; clearTimeout(this.menuT); const rm = window.matchMedia('(prefers-reduced-motion: reduce)').matches; this.setState({ menuClosing: true }); this.menuT = setTimeout(() => this.setState({ menuOpen: false, menuClosing: false }), rm ? 160 : 520); }
+  renderVals() {
+    const s = this.state, f = s.f, isMobile = s.w < 768;
+    const h = new Date().getHours(), avail = h >= 8 && h < 22;
+    const on = {};
+    ['name', 'email', 'phone', 'topic', 'msg'].forEach(k => on[k] = e => { const v = e.target.value; this.setState(st => ({ f: { ...st.f, [k]: v }, errs: {}, errMsg: '' })); });
+    const ebc = k => s.errs[k] ? '#B5503C' : '#CFC3AE';
+    return {
+      isMobile, isDesktop: !isMobile,
+      menuOpen: s.w < 1000 && s.menuOpen,
+      navFull: s.w >= 1000, navCompact: s.w < 1000,
+      headerBg: s.scrolled && BDF ? 'rgba(234,227,214,0.72)' : '#EAE3D6',
+      headerBlur: s.scrolled && BDF ? (s.w < 768 ? 'blur(12px) saturate(160%)' : 'blur(20px) saturate(160%)') : 'none',
+      headerBorder: s.scrolled ? 'rgba(255,255,255,0.4)' : '#D3C8B5',
+      headerShadow: s.scrolled ? '0 6px 24px rgba(30,46,37,0.08)' : '0 0 0 rgba(30,46,37,0)',
+      headerH: s.scrolled ? '64px' : '76px',
+      menuLabel: s.menuOpen && !s.menuClosing ? 'Zatvori' : 'Meni', menuExpanded: s.menuOpen && !s.menuClosing ? 'true' : 'false', menuClosingAttr: s.menuClosing ? '1' : undefined,
+      toggleMenu: () => { if (s.menuOpen) this.closeMenuAnim(); else { clearTimeout(this.menuT); this.setState({ menuOpen: true, menuClosing: false }); } },
+      closeMenu: () => this.closeMenuAnim(),
+      stickyVisible: isMobile && (this.props.showStickyBar ?? true),
+      dot: avail ? '#4F7A55' : '#9A917F', dotRing: avail ? 'rgba(79,122,85,0.55)' : 'rgba(154,145,127,0.4)',
+      nowLabel: avail ? ' · sada smo dostupni' : ' · javljamo se ujutru od 08h',
+      ...Object.fromEntries([0, 1, 2, 3].map(i => { const h = s.hc === i; return ['c' + i, { lift: h ? 'translateY(-4px)' : 'translateY(0)', shadow: h ? (i === 0 ? '0 12px 32px -8px rgba(201,162,75,0.45), 0 24px 48px -16px rgba(201,162,75,0.35)' : '0 12px 32px -8px rgba(30,46,37,0.18), 0 24px 48px -16px rgba(30,46,37,0.16)') : '0 0 0 0 rgba(30,46,37,0), 0 0 0 0 rgba(30,46,37,0)', arrow: h ? 'translateX(5px)' : 'translateX(0)', enter: () => this.setState({ hc: i }), leave: () => this.setState({ hc: null }) }]; })),
+      formCols: s.w >= 900 ? 'minmax(0,1fr) minmax(0,1.25fr)' : 'minmax(0,1fr)',
+      mapAr: s.w >= 700 ? '21 / 9' : '4 / 3', mapCardPos: s.w >= 700 ? 'absolute' : 'relative', mapCardMt: s.w >= 700 ? '0px' : '16px', mapCardOff: s.w >= 700 ? '20px' : '0px',
+      faqCols: s.w >= 900 ? 'minmax(0,1fr) minmax(0,2fr)' : 'minmax(0,1fr)', faqPos: s.w >= 900 ? 'sticky' : 'static',
+      ctaBtnDir: s.w < 480 ? 'column' : 'row', ctaBtnW: s.w < 480 ? '100%' : 'auto',
+      ...(() => { const VAL = { name: v => !!v.trim(), email: v => /^\S+@\S+\.\S+$/.test(v), phone: v => !v.trim() || v.replace(/\D/g, '').length >= 6, msg: v => !!v.trim() };
+        const MSG = { name: 'Unesite ime i prezime', email: 'Unesite ispravnu email adresu', phone: 'Unesite ispravan broj telefona', msg: 'Napišite poruku' };
+        const tc = s.touched || {}, bad = {}, okm = {}, emsg = {}, blur = {};
+        ['name', 'email', 'phone', 'msg', 'ages', 'note'].forEach(k => { const v = f[k] == null ? '' : String(f[k]); const inval = VAL[k] ? !VAL[k](v) : false; const b = !!(s.errs[k] || (tc[k] && inval)); bad[k] = b ? '1' : '0'; okm[k] = VAL[k] && v.trim() && !inval ? '1' : '0'; emsg[k] = b && MSG[k] ? MSG[k] : ''; blur[k] = () => this.setState(st => ({ touched: { ...(st.touched || {}), [k]: true } })); });
+        return { bad, okm, emsg, blur, sending: !!s.sending, notSending: !s.sending }; })(),
+      f, on, eb: { name: ebc('name'), email: ebc('email'), msg: ebc('msg') },
+      topics: TOPICS.map(v => ({ v, sel: f.topic === v })),
+      faq: FAQ.map(([q, a], i) => ({ q, a, expanded: s.open === i ? 'true' : 'false', rows: s.open === i ? '1fr' : '0fr', op: s.open === i ? 1 : 0, rot: s.open === i ? 'rotate(45deg)' : 'rotate(0deg)', toggle: () => this.setState({ open: s.open === i ? -1 : i }) })),
+      errMsg: s.errMsg,
+      sent: s.sent, notSent: !s.sent,
+      reset: () => this.setState({ sent: false, f: { ...f, msg: '' } }),
+      submit: e => {
+        e.preventDefault();
+        const errs = {};
+        if (!f.name.trim()) errs.name = 1;
+        if (!/^\S+@\S+\.\S+$/.test(f.email)) errs.email = 1;
+        if (!f.msg.trim()) errs.msg = 1;
+        if (Object.keys(errs).length) return this.setState({ errs, touched: { name: true, email: true, phone: true, msg: true }, errMsg: 'Proverite označena polja: ' + [errs.name && 'ime', errs.email && 'email', errs.msg && 'poruka'].filter(Boolean).join(', ') + '.' });
+        this.setState({ sending: true }); clearTimeout(this.sendT); this.sendT = setTimeout(() => this.setState({ sending: false, sent: true, touched: {} }), 1100);
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>

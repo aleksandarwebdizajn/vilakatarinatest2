@@ -1,0 +1,10 @@
+/* Vila Katarina — stilovi stranice */
+@media (max-width:767px){
+body:has([data-vk-sticky]){padding-bottom:calc(69px + env(safe-area-inset-bottom))}
+#vk-top{right:16px!important;width:44px!important;height:44px!important}
+body:has([data-vk-sticky]) #vk-top{bottom:calc(85px + env(safe-area-inset-bottom))!important}
+html.vk-menu [data-vk-sticky],html.vk-dp [data-vk-sticky],html.vk-form [data-vk-sticky]{transform:translateY(110%);opacity:0;pointer-events:none}
+html.vk-menu #vk-top,html.vk-menu [data-vk-sticky],html.vk-dp #vk-top{opacity:0!important;pointer-events:none!important}
+html.vk-lb [data-vk-sticky],html.vk-lb #vk-top,html.vk-lb header{opacity:0!important;visibility:hidden!important;pointer-events:none!important}
+}
+button{font-family:'Sora',sans-serif}

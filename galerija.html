@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="sr" style="background:#EAE3D6">
+<head>
+<!--VK-HEAD-->
+<style id="vk-loader-css">
+html,body{background:#EAE3D6;margin:0}
+#vk-loader{display:none}
+html.vk-l #vk-loader{display:flex;position:fixed;inset:0;z-index:2147483000;align-items:center;justify-content:center;background:#EAE3D6;transform:translateY(0);will-change:transform}
+html.vk-lock,html.vk-lock body{overflow:hidden!important}
+#vk-loader::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.32;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .43 0 0 0 0 .4 0 0 0 0 .35 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+#vk-loader::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 70% 60% at 50% 45%,rgba(249,246,241,.55),rgba(249,246,241,0) 70%)}
+.vk-l-in{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;text-align:center;font-family:'Sora',system-ui,sans-serif;-webkit-font-smoothing:antialiased;transition:opacity .3s ease-out,transform .4s ease-out}
+.vk-l-art{display:block;width:240px;height:120px;overflow:visible}
+.vk-l-d{fill:none;stroke:#2F4A3A;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:vk-l-draw var(--t,.5s) cubic-bezier(.65,0,.35,1) var(--d,0s) forwards}
+@keyframes vk-l-draw{to{stroke-dashoffset:0}}
+.vk-l-sun{fill:#C9A24B;transform:translateY(34px);animation:vk-l-rise 1.7s cubic-bezier(.22,1,.36,1) .25s forwards}
+@keyframes vk-l-rise{to{transform:none}}
+.vk-l-logo{margin-top:22px;display:flex;flex-direction:column;align-items:center;line-height:1;opacity:0;animation:vk-l-fade .6s ease-out .75s forwards}
+.vk-l-name{font-size:26px;font-weight:600;letter-spacing:-.01em;color:#1E2E25}
+.vk-l-sub{font-size:11px;font-weight:500;letter-spacing:.32em;padding-left:.32em;color:#6E675B;margin-top:8px}
+.vk-l-bar{margin-top:30px;width:160px;height:2px;border-radius:2px;background:rgba(201,162,75,.22);overflow:hidden;opacity:0;animation:vk-l-fade .5s ease-out .2s forwards}
+.vk-l-bar i{display:block;height:100%;background:#C9A24B;transform-origin:0 50%;transform:scaleX(0)}
+.vk-l-txt{margin:14px 0 0;font-size:12px;letter-spacing:.02em;color:#6E675B;opacity:0;animation:vk-l-fade .5s ease-out .3s forwards}
+@keyframes vk-l-fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+#vk-loader.vk-l-out .vk-l-in{opacity:0;transform:translateY(-10px)}
+#vk-loader.vk-l-up{transform:translateY(-100%);transition:transform .8s cubic-bezier(.7,0,.2,1);box-shadow:0 18px 50px -10px rgba(30,46,37,.22)}
+#vk-loader.vk-l-fade{opacity:0;transition:opacity .3s ease-out}
+@media (max-width:600px){.vk-l-art{width:180px;height:90px}.vk-l-name{font-size:22px}.vk-l-logo{margin-top:18px}}
+@media (prefers-reduced-motion:reduce){.vk-l-art{display:none}.vk-l-logo,.vk-l-bar,.vk-l-txt{animation:none;opacity:1}.vk-l-in{transition:none}}
+</style>
+<script>
+(function(){var d=document.documentElement,show=true;
+try{var n=performance.getEntriesByType&&performance.getEntriesByType('navigation')[0];
+var type=n?n.type:(performance.navigation&&performance.navigation.type===1?'reload':'navigate');
+var same=false;try{same=!!document.referrer&&new URL(document.referrer).origin===location.origin}catch(e){}
+var seen=sessionStorage.getItem('vk-visited')==='1';
+var nav=sessionStorage.getItem('vk-nav')==='1';sessionStorage.removeItem('vk-nav');if(type!=='reload'&&(same||nav)&&seen)show=false;
+sessionStorage.setItem('vk-visited','1');}catch(e){}
+if(show){d.classList.add('vk-l');d.classList.add('vk-lock');}})();
+</script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<!--/VK-HEAD-->
+<!--VK-IMGS-->
+<link rel="preload" as="image" href="images/jela-dnevna-soba.webp" fetchpriority="high">
+<link rel="preload" as="image" href="images/jela-spavaca-soba.webp" fetchpriority="high">
+<link rel="preload" as="image" href="images/jela-trpezarija.webp" fetchpriority="high">
+<link rel="preload" as="image" href="images/jela-kupatilo.webp" fetchpriority="high">
+<link rel="preload" as="image" href="images/bor-dnevna-soba.webp" fetchpriority="high">
+<link rel="preload" as="image" href="images/bor-spavaca-soba.webp" fetchpriority="high">
+<script>
+(function(){var S=window.__vkS='',M=["karta-zlatibora","karta-zlatibora-siroka","mini-mapa-v2"],A=function(u){try{return new URL(u,location.href).href}catch(e){return u}},P=window.__vkImgP=window.__vkImgP||{},K=window.__vkImgK=[];
+function go(u,hi){u=A(u);if(P[u])return P[u];var i=new Image(),p;i.decoding='async';if(hi&&'fetchPriority' in i)i.fetchPriority='high';
+p=P[u]=new Promise(function(r){function fin(){p.done=1;r()}function ok(){(i.decode?i.decode():Promise.resolve()).then(fin,fin)}i.onload=ok;i.onerror=fin;i.src=u});K.push(i);return p}
+window.__vkImg=go;var U=function(n){return 'images/'+n+(M.indexOf(n)>=0?'.png':'.webp')},H=["jela-dnevna-soba","jela-spavaca-soba","jela-trpezarija","jela-kupatilo","bor-dnevna-soba","bor-spavaca-soba"].map(U),L=["jela-dnevna-soba","jela-spavaca-soba","jela-kupatilo","bor-kuhinja","bor-kupatilo","fasada-vile","ulaz-u-vilu","dvoriste","parking","vila-u-sumrak","breza-balkon","jutarnja-magla","dvoriste-u-snegu","ski-tornik","gondola-zimi","suma-zimi","setnja-suma","kraljeve-vode","gondola-leto","stopica-pecina","gostiljski-vodopad","centar-praznicno","ljuljaska","detalj-kamin","detalj-obloga-tekstil","breza-cajna-kuhinja","jela-trpezarija","bor-dnevna-soba","bor-spavaca-soba","breza-studio","jela-terasa","bor-terasa","terasa-u-sumrak","pogled-na-planinu","vila-pod-snegom","dvoriste-leti"].map(U).concat(["images/terasa-u-sumrak.webp"]);
+window.__vkImgs=L.map(A);H.forEach(function(u){go(u,1)});L.forEach(function(u){go(u)});})();
+</script>
+<!--/VK-IMGS-->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/galerija.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Galerija — Vila Katarina, Zlatibor</title>
+<meta name="description" content="Fotografije enterijera, eksterijera i pogleda, i Zlatibor zimi i leti.">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<script src="js/components.js"></script>
+<script src="js/runtime.js"></script>
+</head>
+<body style="background:#EAE3D6">
+<!--VK-BODY-->
+<div id="vk-loader" role="status" aria-live="polite" aria-label="Učitavanje">
+<div class="vk-l-in">
+<svg class="vk-l-art" viewBox="0 0 240 120" aria-hidden="true">
+<defs><clipPath id="vk-l-sky"><path d="M0 0H240V74H224C200 66 170 80 140 70C100 56 60 60 20 92H0Z"/></clipPath></defs>
+<g clip-path="url(#vk-l-sky)"><circle class="vk-l-sun" cx="150" cy="50" r="10"/></g>
+<path class="vk-l-d" pathLength="1" style="--d:0s;--t:.9s" d="M20 92C60 60 100 56 140 70C170 80 200 66 224 74"/>
+<path class="vk-l-d" pathLength="1" style="--d:.12s;--t:1s" d="M4 104C40 84 76 82 108 94C140 106 176 86 236 98"/>
+<path class="vk-l-d" pathLength="1" style="--d:.62s;--t:.35s" d="M168 97V71"/>
+<path class="vk-l-d" pathLength="1" style="--d:.66s;--t:.4s" d="M161 81L168 71L175 81M159 89L168 78L177 89M157 97L168 85L179 97"/>
+<path class="vk-l-d" pathLength="1" style="--d:.74s;--t:.35s" d="M186 95V60"/>
+<path class="vk-l-d" pathLength="1" style="--d:.78s;--t:.4s" d="M178 72L186 60L194 72M175 82L186 69L197 82M172 92L186 78L200 92"/>
+<path class="vk-l-d" pathLength="1" style="--d:.86s;--t:.3s" d="M204 99V72"/>
+<path class="vk-l-d" pathLength="1" style="--d:.88s;--t:.32s" d="M198 81L204 72L210 81M196 89L204 79L212 89M194 97L204 86L214 97"/>
+</svg>
+<div class="vk-l-logo"><span class="vk-l-name">Vila Katarina</span><span class="vk-l-sub">ZLATIBOR</span></div>
+<div class="vk-l-bar"><i></i></div>
+<p class="vk-l-txt">Pripremamo vaš boravak…</p>
+</div>
+</div>
+<script>
+(function(){var d=document.documentElement,L=document.getElementById('vk-loader');if(!L)return;
+if(!d.classList.contains('vk-l')){L.style.display='none';return;}
+var RM=matchMedia('(prefers-reduced-motion: reduce)').matches,bar=L.querySelector('.vk-l-bar i'),t0=performance.now(),MIN=1200,MAX=6000;
+var loaded=document.readyState==='complete',p=0,target=0,done=false;
+addEventListener('load',function(){loaded=true});
+function hero(){var m=document.querySelector('main');if(!m)return null;var s=m.querySelector('section')||m;return [].slice.call(s.querySelectorAll('img'))}
+function tick(now){var el=now-t0,im=[].filter.call(document.images,function(i){return !L.contains(i)}),c=0;
+im.forEach(function(i){if(i.complete)c++});
+var f=!document.fonts||document.fonts.status==='loaded'?1:0;
+var V=window.__vkImgs||[],P=window.__vkImgP||{},nd=0;V.forEach(function(u){var q=P[u];if(!q||q.done)nd++});
+var real=(c+nd+f+(loaded?1:0))/(im.length+V.length+2),creep=.8*(1-Math.exp(-el/1800));
+target=Math.max(target,Math.min(.96,Math.max(real*.96,creep)));
+p+=(target-p)*.1;bar.style.transform='scaleX('+p.toFixed(4)+')';
+var h=hero(),domOk=h?true:(loaded&&(!document.querySelector('x-dc')||el>2500)),imgOk=nd===V.length&&c===im.length;
+if((loaded&&f&&domOk&&imgOk&&el>=MIN)||el>=MAX)finish();else requestAnimationFrame(tick);}
+function reveal(){window.__vkGo=1;dispatchEvent(new Event('vk:reveal'))}
+function end(){L.style.display='none';d.classList.remove('vk-l','vk-lock')}
+function finish(){if(done)return;done=true;
+bar.style.transition='transform .35s cubic-bezier(.22,1,.36,1)';bar.style.transform='scaleX(1)';
+if(RM){setTimeout(function(){reveal();L.classList.add('vk-l-fade');setTimeout(end,320)},250);return;}
+setTimeout(function(){L.classList.add('vk-l-out')},380);
+setTimeout(function(){reveal();L.classList.add('vk-l-up');setTimeout(end,820)},680);}
+requestAnimationFrame(tick);})();
+</script>
+<!--/VK-BODY-->
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="js/main.js"></script>
+</helmet>
+
+<header style="position:fixed;top:0;left:0;right:0;z-index:100;background:{{ headerBg }};backdrop-filter:{{ headerBlur }};-webkit-backdrop-filter:{{ headerBlur }};border-bottom:1px solid {{ headerBorder }};box-shadow:{{ headerShadow }};transition:background 0.25s ease-out, border-color 0.25s ease-out, box-shadow 0.3s ease-out">
+  <div style="max-width:1100px;margin:0 auto;padding:0 24px;height:{{ headerH }};display:flex;align-items:center;justify-content:space-between;gap:24px;transition:height 0.25s ease-out">
+    <a href="index.html" style="display:flex;flex-direction:column;line-height:1;color:#1E2E25;transition:opacity 0.2s ease" style-hover="opacity:0.55">
+      <span style="font-size:21px;font-weight:600;letter-spacing:-0.01em">Vila Katarina</span>
+      <span style="font-size:10px;font-weight:500;letter-spacing:0.28em;color:#6E675B;margin-top:5px">ZLATIBOR</span>
+    </a>
+    <sc-if value="{{ navFull }}" hint-placeholder-val="{{ true }}">
+      <nav style="display:flex;align-items:center;gap:26px;font-size:14px;font-weight:500">
+        <a href="index.html" style="padding:6px 0;background-image:linear-gradient(#2F4A3A,#2F4A3A);background-repeat:no-repeat;background-position:50% 100%;transition:background-size 0.25s ease-out, color 0.25s ease-out;background-size:0% 1.5px;color:#3D3A35" style-hover="color:#2F4A3A;background-size:100% 1.5px">Početna</a>
+        <a href="apartmani.html" style="padding:6px 0;background-image:linear-gradient(#2F4A3A,#2F4A3A);background-repeat:no-repeat;background-position:50% 100%;transition:background-size 0.25s ease-out, color 0.25s ease-out;background-size:0% 1.5px;color:#3D3A35" style-hover="color:#2F4A3A;background-size:100% 1.5px">Apartmani</a>
+        <a href="galerija.html" style="padding:6px 0;background-image:linear-gradient(#2F4A3A,#2F4A3A);background-repeat:no-repeat;background-position:50% 100%;transition:background-size 0.25s ease-out, color 0.25s ease-out;background-size:100% 1.5px;color:#2F4A3A" aria-current="page">Galerija</a>
+        <a href="cene-i-rezervacija.html" style="padding:6px 0;background-image:linear-gradient(#2F4A3A,#2F4A3A);background-repeat:no-repeat;background-position:50% 100%;transition:background-size 0.25s ease-out, color 0.25s ease-out;background-size:0% 1.5px;color:#3D3A35" style-hover="color:#2F4A3A;background-size:100% 1.5px">Cene i rezervacija</a>
+        <a href="lokacija.html" style="padding:6px 0;background-image:linear-gradient(#2F4A3A,#2F4A3A);background-repeat:no-repeat;background-position:50% 100%;transition:background-size 0.25s ease-out, color 0.25s ease-out;background-size:0% 1.5px;color:#3D3A35" style-hover="color:#2F4A3A;background-size:100% 1.5px">Lokacija</a>
+        <a href="kontakt.html" style="padding:6px 0;background-image:linear-gradient(#2F4A3A,#2F4A3A);background-repeat:no-repeat;background-position:50% 100%;transition:background-size 0.25s ease-out, color 0.25s ease-out;background-size:0% 1.5px;color:#3D3A35" style-hover="color:#2F4A3A;background-size:100% 1.5px">Kontakt</a>
+      </nav>
+      <a href="cene-i-rezervacija.html#kalendar" style="background:#2F4A3A;color:#FFFFFF;border-radius:8px;padding:12px 20px;font-size:15px;font-weight:500;transition:background-color 0.25s ease-out, background-size 0.25s ease-out, color 0.25s ease-out, border-color 0.25s ease-out, transform 0.25s ease-out, box-shadow 0.3s ease-out" style-hover="background-color:#1E2E25;color:#FFFFFF;transform:translateY(-2px);box-shadow:0 4px 12px -2px rgba(47,74,58,0.32), 0 10px 28px -4px rgba(47,74,58,0.26), 0 18px 44px -8px rgba(47,74,58,0.16)" style-active="transform:scale(0.98)">Proveri dostupnost</a>
+    </sc-if>
+    <sc-if value="{{ navCompact }}" hint-placeholder-val="{{ false }}">
+      <button onClick="{{ toggleMenu }}" aria-expanded="{{ menuExpanded }}" aria-label="{{ menuLabel }}" style="background:transparent;border:1.5px solid #2F4A3A;color:#2F4A3A;border-radius:8px;height:44px;padding:0 16px;font-size:14px;font-weight:500;cursor:pointer;background-image:linear-gradient(#2F4A3A,#2F4A3A);background-repeat:no-repeat;background-position:0 100%;background-size:100% 0%;transition:background-color 0.25s ease-out, background-size 0.25s ease-out, color 0.25s ease-out, border-color 0.25s ease-out, transform 0.25s ease-out, box-shadow 0.3s ease-out" style-hover="background-size:100% 100%;color:#FFFFFF" style-active="transform:scale(0.98)"><span data-burger="" aria-hidden="true"><i></i><i></i><i></i></span>{{ menuLabel }}</button>
+    </sc-if>
+  </div>
+  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+    <nav data-vk-menu="" data-closing="{{ menuClosingAttr }}" aria-label="Glavni meni" style="position:fixed;left:0;right:0;top:0;height:100dvh;z-index:-1;background:#EAE3D6;padding:calc({{ headerH }} + 12px) 24px calc(24px + env(safe-area-inset-bottom));display:flex;flex-direction:column;overflow-y:auto;overscroll-behavior:contain">
+      <div style="display:flex;flex-direction:column;gap:4px">
+        <a data-vk-mi="" href="index.html" onClick="{{ closeMenu }}" style="display:flex;align-items:center;gap:12px;min-height:56px;font-size:28px;font-weight:500;letter-spacing:-0.01em;color:#1E2E25">Početna</a>
+        <a data-vk-mi="" href="apartmani.html" onClick="{{ closeMenu }}" style="display:flex;align-items:center;gap:12px;min-height:56px;font-size:28px;font-weight:500;letter-spacing:-0.01em;color:#1E2E25">Apartmani</a>
+        <a data-vk-mi="" href="galerija.html" onClick="{{ closeMenu }}" aria-current="page" style="display:flex;align-items:center;gap:12px;min-height:56px;font-size:28px;font-weight:600;letter-spacing:-0.01em;color:#2F4A3A">Galerija<span aria-hidden="true" style="width:7px;height:7px;border-radius:50%;background:#C9A24B;flex:none"></span></a>
+        <a data-vk-mi="" href="cene-i-rezervacija.html" onClick="{{ closeMenu }}" style="display:flex;align-items:center;gap:12px;min-height:56px;font-size:28px;font-weight:500;letter-spacing:-0.01em;color:#1E2E25">Cene i rezervacija</a>
+        <a data-vk-mi="" href="lokacija.html" onClick="{{ closeMenu }}" style="display:flex;align-items:center;gap:12px;min-height:56px;font-size:28px;font-weight:500;letter-spacing:-0.01em;color:#1E2E25">Lokacija</a>
+        <a data-vk-mi="" href="kontakt.html" onClick="{{ closeMenu }}" style="display:flex;align-items:center;gap:12px;min-height:56px;font-size:28px;font-weight:500;letter-spacing:-0.01em;color:#1E2E25">Kontakt</a>
+      </div>
+      <div data-vk-mi="" style="height:1px;background:#D3C8B5;margin:20px 0 24px;flex:none"></div>
+      <a href="cene-i-rezervacija.html#kalendar" onClick="{{ closeMenu }}" data-vk-mi="" style="display:flex;align-items:center;justify-content:center;flex:none;height:52px;background:#2F4A3A;color:#FFFFFF;border-radius:8px;font-size:16px;font-weight:500">Proveri dostupnost</a>
+      <div data-vk-mi="" style="display:flex;justify-content:center;gap:16px;margin-top:24px;flex:none">
+        <a href="tel:+381641234567" aria-label="Pozovi" style="width:52px;height:52px;border-radius:50%;border:1px solid #CFC3AE;background:#F3EEE5;color:#2F4A3A;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02z"></path></svg></a>
+        <a href="viber://chat?number=%2B381641234567" aria-label="Viber" style="width:52px;height:52px;border-radius:50%;border:1px solid #CFC3AE;background:#F3EEE5;color:#2F4A3A;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.4 0C9.473.028 5.333.344 3.02 2.467 1.302 4.187.696 6.7.633 9.817.57 12.933.488 18.776 6.12 20.36h.003l-.004 2.416s-.037.977.61 1.177c.777.242 1.234-.5 1.98-1.302.407-.44.972-1.084 1.397-1.58 3.85.326 6.812-.416 7.15-.525.776-.252 5.176-.816 5.892-6.657.74-6.020-.36-9.830-2.340-11.546-.596-.55-3.006-2.3-8.375-2.323 0 0-.395-.025-1.037-.017zm.058 1.693c.545-.004.88.017.88.017 4.542.02 6.717 1.388 7.222 1.846 1.675 1.435 2.53 4.868 1.906 9.897v.002c-.604 4.878-4.174 5.184-4.832 5.395-.28.09-2.882.737-6.153.524 0 0-2.436 2.94-3.197 3.704-.12.12-.26.167-.352.144-.13-.033-.166-.188-.165-.414l.02-4.018c-4.762-1.32-4.485-6.292-4.43-8.895.054-2.604.543-4.738 1.996-6.173 1.960-1.773 5.474-2.018 7.110-2.030zm.38 2.602c-.167 0-.303.135-.304.302 0 .167.133.303.3.305 1.624.01 2.946.537 4.028 1.592 1.073 1.046 1.62 2.468 1.633 4.334.002.167.14.3.307.3.166-.002.3-.138.3-.304-.014-1.984-.618-3.596-1.816-4.764-1.19-1.16-2.692-1.753-4.447-1.765zm-3.96.695c-.19-.032-.4.005-.616.117l-.01.002c-.43.247-.816.562-1.146.932-.002.004-.006.004-.008.008-.267.323-.42.638-.46.948-.008.046-.01.093-.007.14 0 .136.022.27.065.4l.013.01c.135.48.473 1.276 1.205 2.604.42.768.903 1.5 1.446 2.186.27.344.56.673.87.984l.132.132c.31.308.64.6.984.87.686.543 1.418 1.027 2.186 1.447 1.328.733 2.126 1.07 2.604 1.206l.01.014c.13.042.265.064.402.063.046.002.092 0 .138-.008.31-.036.627-.19.948-.46.004 0 .003-.002.008-.005.37-.33.683-.72.93-1.148l.003-.01c.225-.432.15-.842-.18-1.120-.004 0-.698-.58-1.037-.83-.36-.255-.73-.492-1.113-.71-.51-.285-1.032-.106-1.248.174l-.447.564c-.23.283-.657.246-.657.246-3.120-.796-3.955-3.955-3.955-3.955s-.037-.426.248-.656l.563-.448c.277-.215.456-.737.17-1.248-.217-.383-.454-.756-.71-1.115-.25-.34-.826-1.033-.83-1.035-.137-.165-.31-.265-.502-.297zm4.49.88c-.158.002-.29.124-.3.282-.01.167.115.312.282.324 1.16.085 2.017.466 2.645 1.15.63.688.93 1.524.906 2.57-.002.168.13.306.3.31.166.003.305-.13.31-.297.025-1.175-.334-2.193-1.067-2.994-.74-.81-1.777-1.253-3.050-1.346h-.024zm.463 1.63c-.16.002-.29.127-.3.287-.008.167.12.31.288.32.523.028.875.175 1.113.422.24.245.388.62.416 1.164.01.167.15.295.318.287.167-.008.295-.15.287-.317-.03-.644-.215-1.178-.58-1.557-.367-.378-.893-.574-1.520-.607h-.018z"></path></svg></a>
+        <a href="https://wa.me/381641234567" aria-label="WhatsApp" style="width:52px;height:52px;border-radius:50%;border:1px solid #CFC3AE;background:#F3EEE5;color:#2F4A3A;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg></a>
+      </div>
+      <p data-vk-mi="" style="margin:auto 0 0;padding-top:24px;text-align:center;font-size:13px;color:#6E675B">Ulica Borova 14, Zlatibor</p>
+    </nav>
+  </sc-if>
+</header>
+<div style="height:76px"></div>
+
+<main>
+  <section data-screen-label="Uvod" style="padding:clamp(64px,9vw,112px) 24px clamp(24px,3vw,36px)">
+    <div style="max-width:1100px;margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center">
+      <p style="margin:0 0 16px;font-size:13px;font-weight:500;letter-spacing:0.22em;color:#5E7D63">GALERIJA</p>
+      <h1 style="margin:0;font-size:clamp(36px,6vw,56px);line-height:1.1;font-weight:600;letter-spacing:-0.02em;color:#1E2E25;max-width:18ch;text-wrap:balance">Vila Katarina iz svakog ugla</h1>
+      <p style="margin:24px 0 0;font-size:17px;line-height:1.7;max-width:56ch;text-wrap:pretty">Pogledajte gde vas čeka odmor, od toplih enterijera do pogleda na borovu šumu.</p>
+    </div>
+  </section>
+
+  <section data-screen-label="Mreža fotografija" style="padding:0 0 clamp(72px,10vw,112px)">
+    <div ref="{{ barRef }}" style="position:sticky;top:80px;z-index:30;padding:8px 16px;pointer-events:none;display:flex;justify-content:center">
+      <div style="pointer-events:auto;position:relative;width:{{ fBarW }};max-width:100%;overflow:hidden;background:#F3EEE5;border:1px solid #D3C8B5;border-radius:14px;box-shadow:{{ barShadow }};transition:box-shadow 0.25s ease">
+        <div ref="{{ fScrollRef }}" onScroll="{{ fOnScroll }}" style="overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:6px;scroll-snap-type:x mandatory;scroll-padding:0 6px">
+        <div ref="{{ fRowRef }}" style="display:flex;gap:4px;width:max-content">
+          <sc-for list="{{ filters }}" as="f" hint-placeholder-count="6">
+            <button onClick="{{ f.pick }}" aria-pressed="{{ f.pressed }}" style="flex:none;scroll-snap-align:start;height:{{ fH }};padding:{{ fPad }};border-radius:8px;border:0;background:{{ f.bg }};color:{{ f.fg }};box-shadow:{{ f.glow }};font-size:14px;font-weight:500;cursor:pointer;white-space:nowrap;transition:background-color 0.25s ease-out, background-size 0.25s ease-out, color 0.25s ease-out, border-color 0.25s ease-out, transform 0.25s ease-out, box-shadow 0.3s ease-out" style-hover="background:{{ f.hoverBg }};transform:translateY(-1px)" style-active="transform:scale(0.98)">{{ f.label }} <span style="opacity:0.7;font-weight:400">{{ f.count }}</span></button>
+          </sc-for>
+        </div>
+        </div>
+        <div aria-hidden="true" style="position:absolute;top:0;bottom:0;left:0;width:40px;pointer-events:none;border-radius:14px 0 0 14px;background:linear-gradient(to right,#F3EEE5 20%,rgba(243,238,229,0));opacity:{{ fadeL }};transition:opacity 0.2s ease"></div>
+        <div aria-hidden="true" style="position:absolute;top:0;bottom:0;right:0;width:40px;pointer-events:none;border-radius:0 14px 14px 0;background:linear-gradient(to left,#F3EEE5 20%,rgba(243,238,229,0));opacity:{{ fadeR }};transition:opacity 0.2s ease"></div>
+      </div>
+    </div>
+    <div style="padding:0 24px">
+      <div ref="{{ gridRef }}" data-vk-flt="" style="max-width:1100px;margin:28px auto 0;display:grid;grid-template-columns:{{ gridCols }};gap:12px;opacity:{{ gridOp }};transition:opacity 0.22s ease">
+        <sc-for list="{{ visible }}" as="p" hint-placeholder-count="12">
+          <button data-tile="" data-fk="{{ p.fk }}" onClick="{{ p.open }}" onMouseEnter="{{ p.enter }}" onMouseLeave="{{ p.leave }}" aria-label="{{ p.caption }}" style="position:relative;display:{{ p.disp }};min-height:0;padding:0;border:0;border-radius:8px;overflow:hidden;cursor:zoom-in;background:#EAE3D6;grid-column:{{ p.col }};grid-row:{{ p.row }};aspect-ratio:{{ p.ar }}">
+            <div style="position:absolute;inset:0;overflow:hidden;transform:{{ p.scale }};transition:transform 0.6s ease">
+              <div style="position:absolute;inset:0;background-image:{{ p.bg }};background-size:cover;background-position:center center;background-repeat:no-repeat"></div>
+            </div>
+            <sc-if value="{{ p.noImg }}" hint-placeholder-val="{{ true }}"><span style="position:absolute;top:14px;left:16px;right:16px;text-align:left;font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:0.12em;line-height:1.4;color:#6E675B">FOTOGRAFIJA</span></sc-if>
+            <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(30,46,37,0.6), rgba(30,46,37,0) 50%)"></div>
+            <div style="position:absolute;inset:0;background:{{ p.overlay }};transition:background 0.3s ease"></div>
+            <span data-cap="" style="position:absolute;left:16px;right:16px;bottom:14px;text-align:left;font-size:{{ p.capFs }};font-weight:500;line-height:1.4;color:#FFFFFF;text-wrap:pretty;display:{{ p.capDisp }};-webkit-box-orient:vertical;-webkit-line-clamp:{{ p.capClamp }};overflow:hidden">{{ p.caption }}</span>
+            <span data-zi="" aria-hidden="true" style="position:absolute;top:10px;right:10px;width:34px;height:34px;border-radius:999px;background:rgba(243,238,229,0.92);display:flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#1E2E25" stroke-width="1.5" stroke-linecap="round"><circle cx="7" cy="7" r="4.5"></circle><path d="M10.5 10.5L14 14M5 7h4M7 5v4"></path></svg></span>
+          </button>
+        </sc-for>
+      </div>
+      <div style="max-width:1100px;margin:56px auto 0;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center">
+        <span style="font-size:15px;color:#6E675B">Više fotografija na Instagramu</span>
+        <a href="https://instagram.com/vilakatarina.zlatibor" style="display:inline-flex;align-items:center;gap:10px;font-size:17px;font-weight:500;color:#2F4A3A" style-hover="color:#C9A24B"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.6"></circle></svg><span style="border-bottom:1px solid currentColor;padding-bottom:2px">@vilakatarina.zlatibor</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section ref="{{ ctaRef }}" data-screen-label="Poziv" style="position:relative;overflow:hidden;min-height:{{ ctaMinH }};display:flex;align-items:center;padding:clamp(64px,8vw,88px) 24px;background:#2F4A3A;color:#F3EEE5">
+    <div aria-hidden="true" style="position:absolute;left:0;right:0;top:-18%;bottom:-18%;background-color:#3D3A35;background-image:url('images/terasa-u-sumrak.webp');background-size:cover;background-position:center;transform:{{ ctaShift }};will-change:transform"></div>
+    <div aria-hidden="true" style="position:absolute;inset:0;background:rgba(30,46,37,0.75)"></div>
+    <div style="position:relative;max-width:720px;margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center">
+      <p style="margin:0 0 16px;font-size:13px;font-weight:500;letter-spacing:0.22em;color:#C3CDBF">REZERVACIJA</p>
+      <h2 style="margin:0;font-size:clamp(28px,4vw,44px);line-height:1.18;font-weight:600;letter-spacing:-0.015em;color:#FFFFFF;text-wrap:balance">Svidelo vam se? Vidimo se na Zlatiboru.</h2>
+      <p style="margin:18px 0 0;font-size:17px;line-height:1.7;color:#F3EEE5;max-width:560px;text-wrap:balance">Proverite slobodne termine i pošaljite upit. Javljamo se lično, obično u roku od sat vremena.</p>
+      <div style="margin-top:32px;display:flex;flex-direction:{{ ctaBtnDir }};gap:12px;width:{{ ctaBtnW }};justify-content:center">
+        <a href="cene-i-rezervacija.html" style="display:inline-flex;align-items:center;justify-content:center;height:52px;padding:0 28px;background:#C9A24B;color:#1E2E25;border-radius:8px;font-size:15px;font-weight:500;white-space:nowrap;background-image:linear-gradient(110deg,rgba(255,255,255,0) 35%,rgba(255,255,255,0.5) 50%,rgba(255,255,255,0) 65%);background-size:250% 100%;background-position:130% 0;background-repeat:no-repeat;transition:background-color 0.25s ease-out, background-size 0.25s ease-out, color 0.25s ease-out, border-color 0.25s ease-out, transform 0.25s ease-out, box-shadow 0.3s ease-out" style-hover="background-color:#B38E3A;color:#1E2E25;transform:translateY(-2px);box-shadow:0 4px 12px -2px rgba(201,162,75,0.35), 0 10px 32px -4px rgba(201,162,75,0.3), 0 18px 48px -8px rgba(201,162,75,0.2);background-position:-30% 0;transition:background-color 0.25s ease-out, background-size 0.25s ease-out, color 0.25s ease-out, border-color 0.25s ease-out, transform 0.25s ease-out, box-shadow 0.3s ease-out, background-position 0.75s ease-out" style-active="transform:scale(0.98)">Proveri dostupnost</a>
+        <a href="apartmani.html" style="display:inline-flex;align-items:center;justify-content:center;height:52px;padding:0 26px;border:1.5px solid #F3EEE5;color:#F3EEE5;border-radius:8px;font-size:15px;font-weight:500;white-space:nowrap;background-image:linear-gradient(#F3EEE5,#F3EEE5);background-repeat:no-repeat;background-position:0 100%;background-size:100% 0%;transition:background-color 0.25s ease-out, background-size 0.25s ease-out, color 0.25s ease-out, border-color 0.25s ease-out, transform 0.25s ease-out, box-shadow 0.3s ease-out" style-hover="background-size:100% 100%;color:#2F4A3A" style-active="transform:scale(0.98)">Pogledaj apartmane</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer style="background:#1E2E25;color:#F3EEE5;padding:72px 24px 40px">
+  <div style="max-width:1100px;margin:0 auto">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:40px">
+      <div>
+        <div style="font-size:21px;font-weight:600;color:#FFFFFF">Vila Katarina</div>
+        <div style="font-size:10px;font-weight:500;letter-spacing:0.28em;color:#C3CDBF;margin-top:6px">ZLATIBOR</div>
+        <p style="margin:20px 0 0;font-size:15px;line-height:1.7;color:#C3CDBF">Ulica Borova 14<br>31315 Zlatibor</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:15px">
+        <div style="font-size:13px;letter-spacing:0.18em;color:#C3CDBF;margin-bottom:6px">STRANICE</div>
+        <a href="apartmani.html" style="color:#F3EEE5" style-hover="color:#C9A24B">Apartmani</a>
+        <a href="galerija.html" style="color:#F3EEE5" style-hover="color:#C9A24B">Galerija</a>
+        <a href="cene-i-rezervacija.html" style="color:#F3EEE5" style-hover="color:#C9A24B">Cene i rezervacija</a>
+        <a href="lokacija.html" style="color:#F3EEE5" style-hover="color:#C9A24B">Lokacija</a>
+        <a href="kontakt.html" style="color:#F3EEE5" style-hover="color:#C9A24B">Kontakt</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:15px">
+        <div style="font-size:13px;letter-spacing:0.18em;color:#C3CDBF;margin-bottom:6px">KONTAKT</div>
+        <a href="tel:+381641234567" style="color:#F3EEE5" style-hover="color:#C9A24B">+381 64 123 4567</a>
+        <span style="color:#C3CDBF;white-space:nowrap">Viber i WhatsApp</span>
+        <a href="mailto:info@vilakatarina.rs" style="color:#F3EEE5" style-hover="color:#C9A24B">info@vilakatarina.rs</a>
+        <a href="https://instagram.com/vilakatarina.zlatibor" style="display:inline-flex;align-items:center;gap:8px;color:#F3EEE5" style-hover="color:#C9A24B"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.6"></circle></svg>@vilakatarina.zlatibor</a>
+      </div>
+      <a href="lokacija.html" aria-label="Lokacija vile na mapi" style="position:relative;display:block;aspect-ratio:3/2;align-self:start;border:1px solid #2F4A3A;border-radius:8px;overflow:hidden;background:#1E2E25;transition:opacity 0.2s ease" style-hover="opacity:0.85">
+        <img loading="eager" decoding="async" src="images/mini-mapa-v2.png" width="1536" height="1024" alt="Mini mapa: Vila Katarina, centar Zlatibora i Gold gondola" style="display:block;width:100%;height:100%;object-fit:cover"></img>
+      </a>
+    </div>
+    <div style="margin-top:56px;padding-top:24px;border-top:1px solid #2F4A3A;font-size:13px;color:#C3CDBF;text-align:center">© 2026 Vila Katarina. Sva prava zadržana.</div>
+  </div>
+</footer>
+
+<sc-if value="{{ stickyVisible }}" hint-placeholder-val="{{ false }}">
+  <div data-vk-sticky="" style="position:fixed;left:0;right:0;bottom:0;z-index:60;background:#F3EEE5;border-top:1px solid #D3C8B5;box-shadow:0 -6px 20px -6px rgba(30,46,37,0.14);padding:8px 12px calc(8px + env(safe-area-inset-bottom));display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;align-items:stretch;transition:transform 0.3s ease-out, opacity 0.3s ease-out">
+    <a href="tel:+381641234567" aria-label="Pozovi" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;height:52px;min-width:0;border:1px solid #2F4A3A;border-radius:8px;background:#2F4A3A;font-size:13px;font-weight:500;line-height:1;color:#FFFFFF;white-space:nowrap"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="flex:none;display:block"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02z"></path></svg><span>Pozovi</span></a>
+    <a href="viber://chat?number=%2B381641234567" aria-label="Viber" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;height:52px;min-width:0;border:1px solid #CFC3AE;border-radius:8px;background:#FBF8F2;font-size:13px;font-weight:500;line-height:1;color:#2F4A3A;white-space:nowrap"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="flex:none;display:block"><path d="M11.4 0C9.473.028 5.333.344 3.02 2.467 1.302 4.187.696 6.7.633 9.817.57 12.933.488 18.776 6.12 20.36h.003l-.004 2.416s-.037.977.61 1.177c.777.242 1.234-.5 1.98-1.302.407-.44.972-1.084 1.397-1.58 3.85.326 6.812-.416 7.15-.525.776-.252 5.176-.816 5.892-6.657.74-6.020-.36-9.830-2.340-11.546-.596-.55-3.006-2.3-8.375-2.323 0 0-.395-.025-1.037-.017zm.058 1.693c.545-.004.88.017.88.017 4.542.02 6.717 1.388 7.222 1.846 1.675 1.435 2.53 4.868 1.906 9.897v.002c-.604 4.878-4.174 5.184-4.832 5.395-.28.09-2.882.737-6.153.524 0 0-2.436 2.94-3.197 3.704-.12.12-.26.167-.352.144-.13-.033-.166-.188-.165-.414l.02-4.018c-4.762-1.32-4.485-6.292-4.43-8.895.054-2.604.543-4.738 1.996-6.173 1.960-1.773 5.474-2.018 7.110-2.030zm.38 2.602c-.167 0-.303.135-.304.302 0 .167.133.303.3.305 1.624.01 2.946.537 4.028 1.592 1.073 1.046 1.62 2.468 1.633 4.334.002.167.14.3.307.3.166-.002.3-.138.3-.304-.014-1.984-.618-3.596-1.816-4.764-1.19-1.16-2.692-1.753-4.447-1.765zm-3.96.695c-.19-.032-.4.005-.616.117l-.01.002c-.43.247-.816.562-1.146.932-.002.004-.006.004-.008.008-.267.323-.42.638-.46.948-.008.046-.01.093-.007.14 0 .136.022.27.065.4l.013.01c.135.48.473 1.276 1.205 2.604.42.768.903 1.5 1.446 2.186.27.344.56.673.87.984l.132.132c.31.308.64.6.984.87.686.543 1.418 1.027 2.186 1.447 1.328.733 2.126 1.07 2.604 1.206l.01.014c.13.042.265.064.402.063.046.002.092 0 .138-.008.31-.036.627-.19.948-.46.004 0 .003-.002.008-.005.37-.33.683-.72.93-1.148l.003-.01c.225-.432.15-.842-.18-1.120-.004 0-.698-.58-1.037-.83-.36-.255-.73-.492-1.113-.71-.51-.285-1.032-.106-1.248.174l-.447.564c-.23.283-.657.246-.657.246-3.120-.796-3.955-3.955-3.955-3.955s-.037-.426.248-.656l.563-.448c.277-.215.456-.737.17-1.248-.217-.383-.454-.756-.71-1.115-.25-.34-.826-1.033-.83-1.035-.137-.165-.31-.265-.502-.297zm4.49.88c-.158.002-.29.124-.3.282-.01.167.115.312.282.324 1.16.085 2.017.466 2.645 1.15.63.688.93 1.524.906 2.57-.002.168.13.306.3.31.166.003.305-.13.31-.297.025-1.175-.334-2.193-1.067-2.994-.74-.81-1.777-1.253-3.050-1.346h-.024zm.463 1.63c-.16.002-.29.127-.3.287-.008.167.12.31.288.32.523.028.875.175 1.113.422.24.245.388.62.416 1.164.01.167.15.295.318.287.167-.008.295-.15.287-.317-.03-.644-.215-1.178-.58-1.557-.367-.378-.893-.574-1.520-.607h-.018z"></path></svg><span>Viber</span></a>
+    <a href="https://wa.me/381641234567" aria-label="WhatsApp" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;height:52px;min-width:0;border:1px solid #CFC3AE;border-radius:8px;background:#FBF8F2;font-size:13px;font-weight:500;line-height:1;color:#2F4A3A;white-space:nowrap"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="flex:none;display:block"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg><span>WhatsApp</span></a>
+  </div>
+</sc-if>
+
+<sc-if value="{{ lbMob }}" hint-placeholder-val="{{ false }}">
+  <div role="dialog" aria-modal="true" aria-label="{{ lbCaption }}" onClick="{{ closeLb }}" onTouchStart="{{ mTouchStart }}" onTouchMove="{{ mTouchMove }}" onTouchEnd="{{ mTouchEnd }}" style="position:fixed;inset:0;z-index:200;background:rgba(30,46,37,0.96);display:flex;flex-direction:column;justify-content:center;padding:calc(12px + env(safe-area-inset-top)) 12px calc(16px + env(safe-area-inset-bottom));overscroll-behavior:contain;touch-action:none">
+    <div style="display:flex;flex-direction:column;align-items:center;transform:{{ lbMove }};opacity:{{ lbOp }};transition:{{ lbTr }}">
+      <div onClick="{{ stop }}" style="align-self:stretch;display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+        <span style="font-size:14px;color:#C3CDBF;font-variant-numeric:tabular-nums">{{ lbCounter }}</span>
+        <button onClick="{{ closeLb }}" aria-label="Zatvori" style="width:44px;height:44px;background:transparent;border:1px solid #5E7D63;border-radius:8px;color:#F3EEE5;font-size:22px;cursor:pointer">×</button>
+      </div>
+      <sc-if value="{{ lbImg }}" hint-placeholder-val="{{ false }}">
+        <div onClick="{{ stop }}" role="img" aria-label="{{ lbCaption }}" style="width:{{ lbW }};aspect-ratio:{{ lbAr }};border-radius:6px;background-color:#1E2E25;background-image:{{ lbBg }};background-size:cover;background-position:center;background-repeat:no-repeat"></div>
+      </sc-if>
+      <sc-if value="{{ lbNoImg }}" hint-placeholder-val="{{ true }}">
+        <div onClick="{{ stop }}" style="width:100%;aspect-ratio:4/3;border-radius:6px;background:repeating-linear-gradient(135deg,#B9AE9A 0 16px,#C4B9A5 16px 32px);display:flex;align-items:flex-end;padding:16px">
+          <span style="font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:0.12em;color:#3D3A35">{{ lbTag }}</span>
+        </div>
+      </sc-if>
+      <p onClick="{{ stop }}" style="margin:16px 0 0;max-width:36ch;font-size:16px;line-height:1.5;color:#F3EEE5;text-align:center;text-wrap:pretty">{{ lbCaption }}</p>
+      <div onClick="{{ stop }}" style="display:flex;justify-content:center;gap:12px;margin-top:16px">
+        <button onClick="{{ prev }}" aria-label="Prethodna" style="width:56px;height:48px;background:transparent;border:1px solid #5E7D63;border-radius:8px;color:#F3EEE5;font-size:20px" style-active="transform:scale(0.96)">←</button>
+        <button onClick="{{ next }}" aria-label="Sledeća" style="width:56px;height:48px;background:transparent;border:1px solid #5E7D63;border-radius:8px;color:#F3EEE5;font-size:20px" style-active="transform:scale(0.96)">→</button>
+      </div>
+    </div>
+  </div>
+</sc-if>
+<sc-if value="{{ lbDesk }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ closeLb }}" onTouchStart="{{ touchStart }}" onTouchEnd="{{ touchEnd }}" style="position:fixed;inset:0;z-index:100;background:rgba(30,46,37,0.96);display:flex;flex-direction:column">
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 16px;color:#F3EEE5">
+      <span style="font-size:14px;color:#C3CDBF">{{ lbCounter }}</span>
+      <button onClick="{{ closeLb }}" aria-label="Zatvori" style="width:48px;height:48px;background:transparent;border:1px solid #5E7D63;border-radius:8px;color:#F3EEE5;font-size:22px;cursor:pointer;transition:background-color 0.25s ease-out, background-size 0.25s ease-out, color 0.25s ease-out, border-color 0.25s ease-out, transform 0.25s ease-out, box-shadow 0.3s ease-out" style-hover="background-color:rgba(243,238,229,0.12);transform:translateY(-1px)" style-active="transform:scale(0.98)">×</button>
+    </div>
+    <div style="flex:1;min-height:0;display:flex;align-items:center;justify-content:center;gap:16px;padding:0 16px">
+      <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+        <button onClick="{{ prev }}" aria-label="Prethodna" style="flex:none;width:52px;height:52px;background:transparent;border:1px solid #5E7D63;border-radius:8px;color:#F3EEE5;font-size:20px;cursor:pointer;transition:background-color 0.25s ease-out, background-size 0.25s ease-out, color 0.25s ease-out, border-color 0.25s ease-out, transform 0.25s ease-out, box-shadow 0.3s ease-out" style-hover="border-color:#C9A24B;color:#C9A24B;transform:translateY(-1px)" style-active="transform:scale(0.98)">←</button>
+      </sc-if>
+      <sc-if value="{{ lbImg }}" hint-placeholder-val="{{ false }}">
+        <div onClick="{{ stop }}" role="img" aria-label="{{ lbCaption }}" style="width:100%;max-width:1100px;height:100%;max-height:calc(100dvh - 170px);background-image:{{ lbBg }};background-size:contain;background-repeat:no-repeat;background-position:center"></div>
+      </sc-if>
+      <sc-if value="{{ lbNoImg }}" hint-placeholder-val="{{ true }}">
+        <div onClick="{{ stop }}" style="width:100%;max-width:1000px;max-height:100%;aspect-ratio:16/9;border-radius:8px;background:repeating-linear-gradient(135deg,#B9AE9A 0 16px,#C4B9A5 16px 32px);display:flex;align-items:flex-end;padding:20px">
+          <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:0.12em;color:#3D3A35">{{ lbTag }}</span>
+        </div>
+      </sc-if>
+      <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+        <button onClick="{{ next }}" aria-label="Sledeća" style="flex:none;width:52px;height:52px;background:transparent;border:1px solid #5E7D63;border-radius:8px;color:#F3EEE5;font-size:20px;cursor:pointer;transition:background-color 0.25s ease-out, background-size 0.25s ease-out, color 0.25s ease-out, border-color 0.25s ease-out, transform 0.25s ease-out, box-shadow 0.3s ease-out" style-hover="border-color:#C9A24B;color:#C9A24B;transform:translateY(-1px)" style-active="transform:scale(0.98)">→</button>
+      </sc-if>
+    </div>
+    <div onClick="{{ stop }}" style="padding:20px 16px 28px;text-align:center">
+      <p style="margin:0;font-size:16px;line-height:1.5;color:#F3EEE5">{{ lbCaption }}</p>
+      <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;justify-content:center;gap:12px;margin-top:16px">
+          <button onClick="{{ prev }}" aria-label="Prethodna" style="width:56px;height:48px;background:transparent;border:1px solid #5E7D63;border-radius:8px;color:#F3EEE5;font-size:20px;transition:background-color 0.25s ease-out, background-size 0.25s ease-out, color 0.25s ease-out, border-color 0.25s ease-out, transform 0.25s ease-out, box-shadow 0.3s ease-out" style-hover="background-color:rgba(243,238,229,0.12);transform:translateY(-1px)" style-active="transform:scale(0.98)">←</button>
+          <button onClick="{{ next }}" aria-label="Sledeća" style="width:56px;height:48px;background:transparent;border:1px solid #5E7D63;border-radius:8px;color:#F3EEE5;font-size:20px;transition:background-color 0.25s ease-out, background-size 0.25s ease-out, color 0.25s ease-out, border-color 0.25s ease-out, transform 0.25s ease-out, box-shadow 0.3s ease-out" style-hover="background-color:rgba(243,238,229,0.12);transform:translateY(-1px)" style-active="transform:scale(0.98)">→</button>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showStickyBar&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Mobilni&quot;}}">
+const BDF = typeof CSS !== 'undefined' && !!CSS.supports && (CSS.supports('backdrop-filter', 'blur(1px)') || CSS.supports('-webkit-backdrop-filter', 'blur(1px)'));
+const VKI = n => 'images/' + n + (["karta-zlatibora","karta-zlatibora-siroka","mini-mapa-v2"].includes(n) ? '.png' : '.webp');
+const PHOTOS = [
+  ['enterijer', 'Apartman Jela, dnevna soba sa kaminom'],
+  ['enterijer', 'Apartman Jela, spavaća soba'],
+  ['enterijer', 'Apartman Jela, kuhinja sa trpezarijom'],
+  ['enterijer', 'Apartman Jela, kupatilo sa kadom'],
+  ['enterijer', 'Apartman Bor, dnevna soba'],
+  ['enterijer', 'Apartman Bor, spavaća soba'],
+  ['enterijer', 'Apartman Bor, kuhinja'],
+  ['enterijer', 'Apartman Bor, kupatilo sa tuš kabinom'],
+  ['enterijer', 'Studio Breza, bračni krevet'],
+  ['enterijer', 'Studio Breza, čajna kuhinja'],
+  ['enterijer', 'Detalj, drvena obloga i vuneni tekstil'],
+  ['enterijer', 'Detalj, vatra u kaminu'],
+  ['eksterijer', 'Fasada vile'],
+  ['eksterijer', 'Ulaz u vilu'],
+  ['eksterijer', 'Dvorište sa roštiljem'],
+  ['eksterijer', 'Ljuljaška za decu u dvorištu'],
+  ['eksterijer', 'Parking u dvorištu'],
+  ['eksterijer', 'Vila u sumrak'],
+  ['pogled', 'Apartman Jela, velika terasa'],
+  ['pogled', 'Apartman Bor, terasa ka šumi'],
+  ['pogled', 'Studio Breza, balkon'],
+  ['pogled', 'Zalazak sunca sa terase'],
+  ['pogled', 'Jutarnja magla nad borovom šumom'],
+  ['pogled', 'Pogled na planinu'],
+  ['zima', 'Vila pod snegom'],
+  ['zima', 'Dvorište u snegu'],
+  ['zima', 'Ski staze na Torniku'],
+  ['zima', 'Gold gondola zimi'],
+  ['zima', 'Centar Zlatibora u prazničnom ruhu'],
+  ['zima', 'Borova šuma oko vile zimi'],
+  ['leto', 'Šetnja kroz borovu šumu'],
+  ['leto', 'Kraljeve vode'],
+  ['leto', 'Gold gondola'],
+  ['leto', 'Stopića pećina'],
+  ['leto', 'Gostiljski vodopad'],
+  ['leto', 'Dvorište vile leti']
+].map(([cat, caption], i) => ({ id: i, cat, caption, tag: 'FOTOGRAFIJA: ' + caption.toUpperCase() }));
+const IMG = { 'Apartman Jela, dnevna soba sa kaminom': VKI('jela-dnevna-soba'), 'Apartman Jela, spavaća soba': VKI('jela-spavaca-soba'), 'Apartman Jela, kupatilo sa kadom': VKI('jela-kupatilo'), 'Apartman Bor, kuhinja': VKI('bor-kuhinja'), 'Apartman Bor, kupatilo sa tuš kabinom': VKI('bor-kupatilo'), 'Fasada vile': VKI('fasada-vile'), 'Ulaz u vilu': VKI('ulaz-u-vilu'), 'Dvorište sa roštiljem': VKI('dvoriste'), 'Parking u dvorištu': VKI('parking'), 'Vila u sumrak': VKI('vila-u-sumrak'), 'Studio Breza, balkon': VKI('breza-balkon'), 'Jutarnja magla nad borovom šumom': VKI('jutarnja-magla'), 'Dvorište u snegu': VKI('dvoriste-u-snegu'), 'Ski staze na Torniku': VKI('ski-tornik'), 'Gold gondola zimi': VKI('gondola-zimi'), 'Borova šuma oko vile zimi': VKI('suma-zimi'), 'Šetnja kroz borovu šumu': VKI('setnja-suma'), 'Kraljeve vode': VKI('kraljeve-vode'), 'Gold gondola': VKI('gondola-leto'), 'Stopića pećina': VKI('stopica-pecina'), 'Gostiljski vodopad': VKI('gostiljski-vodopad'), 'Centar Zlatibora u prazničnom ruhu': VKI('centar-praznicno'), 'Ljuljaška za decu u dvorištu': VKI('ljuljaska'), 'Detalj, vatra u kaminu': VKI('detalj-kamin'), 'Detalj, drvena obloga i vuneni tekstil': VKI('detalj-obloga-tekstil'), 'Studio Breza, čajna kuhinja': VKI('breza-cajna-kuhinja'), 'Apartman Jela, kuhinja sa trpezarijom': VKI('jela-trpezarija'), 'Apartman Bor, dnevna soba': VKI('bor-dnevna-soba'), 'Apartman Bor, spavaća soba': VKI('bor-spavaca-soba'), 'Studio Breza, bračni krevet': VKI('breza-studio'), 'Apartman Jela, velika terasa': VKI('jela-terasa'), 'Apartman Bor, terasa ka šumi': VKI('bor-terasa'), 'Zalazak sunca sa terase': VKI('terasa-u-sumrak'), 'Pogled na planinu': VKI('pogled-na-planinu'), 'Vila pod snegom': VKI('vila-pod-snegom'), 'Dvorište vile leti': VKI('dvoriste-leti') };
+function layoutDesk(n) {
+  const out = []; let r = 1, i = 0, b = 0; const seq = ['A', 'B', 'C', 'B'];
+  const put = (c, span, row, rs, big) => out.push({ col: c + ' / span ' + span, row: row + (rs > 1 ? ' / span ' + rs : ''), ar: big ? 'auto' : '16 / 9' });
+  if (n === 6) { for (let k = 0; k < 2; k++) { [1, 5, 9].forEach(c => put(c, 4, r, 1)); r++; } return out; }
+  while (i < n) {
+    const left = n - i, blk = seq[b % 4], need = blk === 'B' ? 3 : 5;
+    if (left >= need) {
+      if (blk === 'A') { put(1, 6, r, 2, true); [[7, r], [10, r], [7, r + 1], [10, r + 1]].forEach(([c, rr]) => put(c, 3, rr, 1)); r += 2; }
+      else if (blk === 'C') { [[1, r], [4, r], [1, r + 1], [4, r + 1]].forEach(([c, rr]) => put(c, 3, rr, 1)); put(7, 6, r, 2, true); r += 2; }
+      else { [1, 5, 9].forEach(c => put(c, 4, r, 1)); r += 1; }
+      i += need; b++; continue;
+    }
+    if (left === 4) { put(1, 6, r, 1); put(7, 6, r, 1); put(1, 6, r + 1, 1); put(7, 6, r + 1, 1); r += 2; }
+    else if (left === 3) { [1, 5, 9].forEach(c => put(c, 4, r, 1)); r++; }
+    else if (left === 2) { put(1, 6, r, 1); put(7, 6, r, 1); r++; }
+    else put(1, 12, r, 1);
+    i = n;
+  }
+  return out;
+}
+function layoutNarrow(n) {
+  const desk = layoutDesk(n), out = desk.map(d => ({ full: d.ar === 'auto' || d.col.endsWith('span 12') }));
+  let run = [];
+  const flush = () => { if (run.length % 2 === 1) out[run[run.length - 1]].full = true; run = []; };
+  out.forEach((o, i) => { if (o.full) flush(); else run.push(i); });
+  flush();
+  return out.map(o => ({ col: o.full ? 'span 2' : 'auto', row: 'auto', ar: '16 / 9' }));
+}
+const CATS = [['sve', 'Sve'], ['enterijer', 'Enterijer'], ['eksterijer', 'Eksterijer'], ['pogled', 'Pogled'], ['zima', 'Zlatibor zimi'], ['leto', 'Zlatibor leti']];
+
+class Component extends DCLogic {
+  state = { w: typeof window !== 'undefined' ? window.innerWidth : 1200, menuOpen: false, cat: 'sve', lb: -1, stuck: false, fading: false, hi: -1, barW: null, fadeL: 0, fadeR: 0, lbDx: 0, lbDy: 0, lbDrag: false };
+  barRef = React.createRef(); gridRef = React.createRef(); ctaRef = React.createRef(); fScrollRef = React.createRef(); fRowRef = React.createRef();
+  fadeUpd() { const sc = this.fScrollRef.current; if (!sc) return; const L = sc.scrollLeft > 4 ? 1 : 0, R = sc.scrollLeft + sc.clientWidth < sc.scrollWidth - 4 ? 1 : 0; if (L !== this.state.fadeL || R !== this.state.fadeR) this.setState({ fadeL: L, fadeR: R }); }
+  measureBar() {
+    const row = this.fRowRef.current; if (!row) return;
+    let w = null;
+    if (window.innerWidth < 768) {
+      const avail = window.innerWidth - 32;
+      if (row.scrollWidth + 14 > avail) for (const b of row.querySelectorAll('button')) { if (b.offsetLeft + b.offsetWidth + 1 > avail) { w = Math.round(b.offsetLeft + b.offsetWidth * 0.5 + 1); break; } }
+    }
+    const v = w ? w + 'px' : null;
+    if (v !== this.state.barW) this.setState({ barW: v }, () => this.fadeUpd()); else this.fadeUpd();
+  }
+  arOf(src) {
+    if (!src) return 4 / 3;
+    const u = new URL(src, location.href).href, c = this.ars || (this.ars = {});
+    if (c[u]) return c[u];
+    const im = (window.__vkImgK || []).find(i => i.src === u) || (window.__vkImgP && window.__vkImgP[u] && window.__vkImgP[u].img);
+    if (im && im.naturalWidth) return (c[u] = im.naturalWidth / im.naturalHeight);
+    this.arL = this.arL || {};
+    if (!this.arL[u]) { this.arL[u] = 1; const i = new Image(); i.onload = () => { c[u] = i.naturalWidth / i.naturalHeight; this.forceUpdate(); }; i.src = u; }
+    return 4 / 3;
+  }
+  componentDidUpdate() { document.documentElement.classList.toggle('vk-lb', this.state.lb >= 0 && this.state.w < 768); }
+  pick(id) {
+    if (id === (this.pendingCat ?? this.state.cat)) return;
+    this.pendingCat = id;
+    const sc = this.fScrollRef.current, idx = CATS.findIndex(c => c[0] === id), btn = sc && sc.querySelectorAll('button')[idx];
+    if (btn && sc.scrollWidth > sc.clientWidth + 4) sc.scrollTo({ left: Math.max(0, btn.offsetLeft - (sc.clientWidth - btn.offsetWidth) / 2), behavior: 'smooth' });
+    const next = new Set((id === 'sve' ? PHOTOS : PHOTOS.filter(p => p.cat === id)).map(p => String(p.id)));
+    const toGrid = () => { const g = this.gridRef.current, bar = this.barRef.current; if (!g) return; const target = g.getBoundingClientRect().top + window.scrollY - 76 - (bar ? bar.offsetHeight : 64) - 12; if (window.scrollY > target) window.scrollTo({ top: target, behavior: 'smooth' }); };
+    const commit = done => this.setState({ cat: id, hi: -1, lb: -1 }, () => { if (this.pendingCat === id) this.pendingCat = null; done && done(); });
+    const g = this.gridRef.current;
+    if (g && window.__vkGridSwap) window.__vkGridSwap(g, commit, toGrid); else commit(toGrid);
+  }
+  componentDidMount() {
+    this.onResize = () => window.innerWidth !== this.state.w && this.setState({ w: window.innerWidth }, () => this.measureBar());
+    requestAnimationFrame(() => this.measureBar());
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => this.measureBar());
+    const nudge = () => setTimeout(() => {
+      const row = this.fRowRef.current, sc = this.fScrollRef.current;
+      if (!row || !sc || window.innerWidth >= 768 || matchMedia('(prefers-reduced-motion: reduce)').matches || sc.scrollWidth <= sc.clientWidth + 4 || sc.scrollLeft > 0) return;
+      row.animate([{ transform: 'translateX(0)' }, { transform: 'translateX(-36px)', offset: 0.45 }, { transform: 'translateX(0)' }], { duration: 600, easing: 'cubic-bezier(0.22,1,0.36,1)' });
+    }, 900);
+    if (document.documentElement.classList.contains('vk-l') && !window.__vkGo) window.addEventListener('vk:reveal', nudge, { once: true }); else nudge();
+    this.onKey = e => {
+      if (this.state.lb < 0) return;
+      if (e.key === 'Escape') this.setState({ lb: -1 });
+      if (e.key === 'ArrowRight') this.step(1);
+      if (e.key === 'ArrowLeft') this.step(-1);
+    };
+    window.addEventListener('resize', this.onResize, { passive: true });
+    this.onScroll = () => { if (window.__vkLockY && window.__vkLockY() !== null) return; const sc = window.scrollY > 8, b = this.barRef.current, st = !!b && b.getBoundingClientRect().top <= 80.5 && window.scrollY > 40; if (sc !== this.state.scrolled || st !== this.state.stuck) this.setState({ scrolled: sc, stuck: st }); const c = this.ctaRef.current; if (c && window.innerWidth >= 768) { const r = c.getBoundingClientRect(); if (r.bottom > 0 && r.top < window.innerHeight) { const p = ((r.top + r.height / 2) - window.innerHeight / 2) / window.innerHeight; const py = Math.round(p * -60); if (py !== this.state.py) this.setState({ py }); } } };
+    this.unScroll = window.__vkScroll ? window.__vkScroll(this.onScroll) : (window.addEventListener('scroll', this.onScroll, { passive: true }), () => window.removeEventListener('scroll', this.onScroll));
+    this.onScroll();
+    window.addEventListener('keydown', this.onKey);
+  }
+  componentWillUnmount() { clearTimeout(this.ft); window.removeEventListener('resize', this.onResize); this.unScroll && this.unScroll(); window.removeEventListener('keydown', this.onKey); document.documentElement.classList.remove('vk-lb'); }
+  list() { return this.state.cat === 'sve' ? PHOTOS : PHOTOS.filter(p => p.cat === this.state.cat); }
+  step(d) { const n = this.list().length; this.setState(s => ({ lb: (s.lb + d + n) % n })); }
+  setLb(i) { this.setState({ lb: i }); }
+  closeMenuAnim() { if (!this.state.menuOpen || this.state.menuClosing) return; clearTimeout(this.menuT); const rm = window.matchMedia('(prefers-reduced-motion: reduce)').matches; this.setState({ menuClosing: true }); this.menuT = setTimeout(() => this.setState({ menuOpen: false, menuClosing: false }), rm ? 160 : 520); }
+  renderVals() {
+    const s = this.state, isMobile = s.w < 768, wide = s.w >= 900, list = this.list(), cur = list[s.lb], lay = wide ? layoutDesk(list.length) : layoutNarrow(list.length);
+    return {
+      isMobile, isDesktop: !isMobile,
+      menuOpen: s.w < 1000 && s.menuOpen,
+      navFull: s.w >= 1000, navCompact: s.w < 1000,
+      headerBg: s.scrolled && BDF ? 'rgba(234,227,214,0.72)' : '#EAE3D6',
+      headerBlur: s.scrolled && BDF ? (s.w < 768 ? 'blur(12px) saturate(160%)' : 'blur(20px) saturate(160%)') : 'none',
+      headerBorder: s.scrolled ? 'rgba(255,255,255,0.4)' : '#D3C8B5',
+      headerShadow: s.scrolled ? '0 6px 24px rgba(30,46,37,0.08)' : '0 0 0 rgba(30,46,37,0)',
+      headerH: s.scrolled ? '64px' : '76px',
+      menuLabel: s.menuOpen && !s.menuClosing ? 'Zatvori' : 'Meni', menuExpanded: s.menuOpen && !s.menuClosing ? 'true' : 'false', menuClosingAttr: s.menuClosing ? '1' : undefined,
+      toggleMenu: () => { if (s.menuOpen) this.closeMenuAnim(); else { clearTimeout(this.menuT); this.setState({ menuOpen: true, menuClosing: false }); } },
+      closeMenu: () => this.closeMenuAnim(),
+      stickyVisible: isMobile && (this.props.showStickyBar ?? true),
+      barRef: this.barRef, gridRef: this.gridRef,
+      ctaRef: this.ctaRef, ctaShift: isMobile ? 'none' : `translate3d(0,${s.py || 0}px,0)`, ctaMinH: isMobile ? '0' : '420px',
+      ctaBtnDir: isMobile ? 'column' : 'row', ctaBtnW: isMobile ? '100%' : 'auto',
+      barShadow: s.stuck ? '0 10px 28px rgba(30,46,37,0.18)' : '0 2px 10px rgba(30,46,37,0.06)',
+      gridCols: wide ? 'repeat(12,minmax(0,1fr))' : 'repeat(2,minmax(0,1fr))',
+      gridOp: 1,
+      filters: CATS.map(([id, label]) => {
+        const on = s.cat === id;
+        return { label, count: id === 'sve' ? PHOTOS.length : PHOTOS.filter(p => p.cat === id).length, pressed: on ? 'true' : 'false',
+          bg: on ? '#2F4A3A' : 'transparent', fg: on ? '#FFFFFF' : '#3D3A35', hoverBg: on ? '#1E2E25' : 'rgba(47,74,58,0.08)', glow: on ? '0 2px 6px -1px rgba(47,74,58,0.32), 0 4px 10px -4px rgba(47,74,58,0.22)' : '0 0 0 0 rgba(47,74,58,0)',
+          pick: () => this.pick(id) };
+      }),
+      fBarW: s.barW || 'fit-content', fH: isMobile ? '36px' : '40px', fPad: isMobile ? '0 12px' : '0 16px',
+      fadeL: s.fadeL, fadeR: s.fadeR, fScrollRef: this.fScrollRef, fRowRef: this.fRowRef, fOnScroll: () => this.fadeUpd(),
+      lbDesk: !!cur && !isMobile, lbMob: !!cur && isMobile,
+      ...(() => { const ar = cur && IMG[cur.caption] ? this.arOf(IMG[cur.caption]) : 4 / 3;
+        return { lbAr: String(ar), lbW: `min(100%, calc((100dvh - 260px) * ${ar.toFixed(4)}))`,
+          lbMove: `translate3d(${s.lbDx}px,${s.lbDy}px,0)`, lbOp: String(1 - Math.min(0.5, s.lbDy / 400)),
+          lbTr: s.lbDrag ? 'none' : 'transform 0.3s cubic-bezier(0.22,1,0.36,1), opacity 0.3s ease' }; })(),
+      mTouchStart: e => { const t = e.touches[0]; this.t0 = { x: t.clientX, y: t.clientY, ax: null }; },
+      mTouchMove: e => { const o = this.t0; if (!o) return; const t = e.touches[0], dx = t.clientX - o.x, dy = t.clientY - o.y;
+        if (!o.ax && Math.hypot(dx, dy) > 8) o.ax = Math.abs(dx) > Math.abs(dy) ? 'x' : 'y';
+        if (o.ax) this.setState({ lbDrag: true, lbDx: o.ax === 'x' ? dx : 0, lbDy: o.ax === 'y' ? Math.max(0, dy) : 0 }); },
+      mTouchEnd: e => { const o = this.t0; this.t0 = null; if (!o || !o.ax) return; e.preventDefault();
+        const { lbDx, lbDy } = this.state;
+        if (o.ax === 'x' && Math.abs(lbDx) > 50) { const d = lbDx < 0 ? 1 : -1; this.step(d); this.setState({ lbDrag: true, lbDx: d * 48, lbDy: 0 }, () => requestAnimationFrame(() => requestAnimationFrame(() => this.setState({ lbDrag: false, lbDx: 0 })))); }
+        else if (o.ax === 'y' && lbDy > 90) this.setState({ lb: -1, lbDrag: false, lbDx: 0, lbDy: 0 });
+        else this.setState({ lbDrag: false, lbDx: 0, lbDy: 0 }); },
+      visible: PHOTOS.map(p => { const i = list.indexOf(p), on = i >= 0, img = IMG[p.caption], L = on ? lay[i] : { col: 'auto', row: 'auto', ar: '16 / 9' };
+        return { ...p, ...L, fk: String(p.id), disp: on ? 'block' : 'none', noImg: !img, bg: img ? `url("${img}")` : 'repeating-linear-gradient(135deg,#D3C8B5 0 14px,#DCD2C1 14px 28px)',
+          ...(isMobile && L.col !== 'span 2' ? { capFs: '13px', capDisp: '-webkit-box', capClamp: '2' } : { capFs: '14px', capDisp: 'block', capClamp: 'none' }),
+          scale: s.hi === p.id ? 'scale(1.03)' : 'scale(1)', overlay: s.hi === p.id ? 'rgba(20,30,24,0.18)' : 'rgba(20,30,24,0)',
+          enter: () => this.setState({ hi: p.id }), leave: () => this.setState({ hi: -1 }), open: () => this.setLb(i) }; }),
+      lbImg: !!(cur && IMG[cur.caption]), lbNoImg: !(cur && IMG[cur.caption]), lbBg: cur && IMG[cur.caption] ? `url("${IMG[cur.caption]}")` : 'none',
+      lbOpen: !!cur,
+      lbTag: cur ? cur.tag : '',
+      lbCaption: cur ? cur.caption : '',
+      lbCounter: cur ? `${s.lb + 1} / ${list.length}` : '',
+      closeLb: () => this.setLb(-1),
+      prev: e => { e.stopPropagation(); this.step(-1); },
+      next: e => { e.stopPropagation(); this.step(1); },
+      stop: e => e.stopPropagation(),
+      touchStart: e => { this.tx = e.touches[0].clientX; },
+      touchEnd: e => {
+        const dx = e.changedTouches[0].clientX - (this.tx ?? 0);
+        if (Math.abs(dx) > 40) { e.preventDefault(); this.step(dx < 0 ? 1 : -1); }
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>
